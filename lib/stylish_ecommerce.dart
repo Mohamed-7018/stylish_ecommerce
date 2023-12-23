@@ -6,6 +6,7 @@ import 'package:stylish_ecommerce/core/di/get_initializer.dart';
 import 'package:stylish_ecommerce/core/helper/custom_scroll_behaviour.dart';
 import 'package:stylish_ecommerce/core/localization/app_localization_delegate.dart';
 import 'package:stylish_ecommerce/core/router/auto_route.dart';
+import 'package:stylish_ecommerce/core/utils/values.dart';
 
 
 class StylishEcommerce extends StatelessWidget {
@@ -19,6 +20,7 @@ class StylishEcommerce extends StatelessWidget {
 
     // Set the fit size using ScreenUtilInit for responsive design.
     return ScreenUtilInit(
+      designSize:Size(figmaDesignWidth.toDouble(), figmaDesignHeight.toDouble()),
       // Use builder only if you need to use library outside ScreenUtilInit context
       builder: (_, child) => MaterialApp.router(
         /// Title displayed in the operating system's task switcher.

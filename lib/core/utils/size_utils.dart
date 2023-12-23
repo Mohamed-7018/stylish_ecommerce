@@ -26,16 +26,16 @@ extension ResponsiveExtension on num {
   }
 
   /// This method is used to set padding/margin (for the left and Right side) & width of the screen or widget according to the Viewport width.
-  double get myWidth => ((this * _width) / figmaDesignWidth);
+  double get horizontal => ((this * _width) / figmaDesignWidth);
 
   /// This method is used to set padding/margin (for the top and bottom side) & height of the screen or widget according to the Viewport height.
-  double get myHeight =>
+  double get vertical =>
       (this * _height) / (figmaDesignHeight - figmaDesignStatusBar);
 
   /// This method is used to set the smallest px in image height and width.
   double get adaptSize {
-    var height = myHeight;
-    var width = myWidth;
+    var height = vertical;
+    var width = horizontal;
     return height < width ? height.toDoubleValue() : width.toDoubleValue();
   }
 

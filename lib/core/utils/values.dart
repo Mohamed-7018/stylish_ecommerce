@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 // 📦 Package imports:
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:stylish_ecommerce/core/theme/theme.dart';
 
 
 part 'colors.dart';
