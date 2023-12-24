@@ -1,16 +1,47 @@
-# Omin Market E-Commerce Flutter App
+# Stylish Ecommerce
 
-This Flutter project consists of three separate applications designed for different user roles: buyer, seller, and delivery man.
+## Business Name: Stylish Ecommerce
 
-## Project Structure
+Welcome to the Stylish Ecommerce project! This is an open-source project aimed at creating a stylish and user-friendly ecommerce platform. Whether you're a developer, designer, or business enthusiast, we invite you to contribute and be a part of shaping the future of online shopping experiences.
 
-The repository is organized into three main directories:
+## Open Source
 
-1. **buyer_app**: Contains the codebase for the buyer-facing application.
-2. **seller_app**: Houses the code for the seller-specific functionalities.
-3. **delivery_man_app**: Includes the code for the delivery man application.
+Stylish Ecommerce is an open-source project, which means that anyone can contribute, modify, and use the codebase freely. We believe in the power of collaboration and welcome developers and designers of all skill levels to join our community.
 
 
-Each app directory follows a similar structure:
+## Architecture
 
-![Alt text](arch.png)
+The architecture of Stylish Ecommerce is designed to be scalable, robust, and easily maintainable. We follow best practices to ensure a smooth development experience and a reliable product.
+
+- **Technology Stack**: [Dart-Flutter]
+
+- **API Collection**: [API Collection](https://www.getpostman.com/collections/94db931dc503afd508a5)
+
+- **Architecture Overview**:
+
+
+  ![Alt text](arch.png)
+
+## Design Figma
+
+The design of Stylish Ecommerce is crafted with precision and attention to detail. We use Figma as our primary design tool to create an intuitive and visually appealing user interface.
+
+- **Design Cover**
+
+
+![cover](https://github.com/Mohamed-7018/stylish_ecommerce/assets/80456446/c507dc78-a2fc-4b8f-b1b7-1db314fc3b2d)  
+- **Figma Design Files**: [Link to Figma files]
+
+- **Design System**: [Link to design system documentation]
+
+## Case Study
+
+Explore the journey of Stylish Ecommerce through our detailed case study. Learn about the challenges we faced, the decisions we made, and the impact on the user experience.
+![Alt text](<Frame 34017.png>)
+
+
+---
+
+**Get Involved!** Contribute to Stylish Ecommerce and help us create a fantastic ecommerce solution. Whether you're a developer, designer, or enthusiast, your ideas and contributions are valuable.
+
+---
