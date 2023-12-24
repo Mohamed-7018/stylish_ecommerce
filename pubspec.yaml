@@ -34,6 +34,8 @@ dependencies:
   flutter_screenutil: ^5.9.0
   # cubit state generator using source_gen 
   freezed: ^2.4.5
+  #Annotations for the freezed code-generator. This package does nothing without freezed too.
+  freezed_annotation: ^2.4.1
   # Dependency Injection helper
   get_it: ^7.6.4
   # Automatically organize your dart imports
