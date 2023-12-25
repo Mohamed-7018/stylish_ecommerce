@@ -132,7 +132,7 @@ class SignUpPage extends StatelessWidget {
                 CustomTextFormField(
                   fillColor: GlobalAppColors.gray10001,
                   controller: TextEditingController(),
-                  hintText: "lbl_password".tr(context),
+                  hintText: "lbl_confirmpassword".tr(context),
                   textInputAction: TextInputAction.done,
                   textInputType: TextInputType.visiblePassword,
                   prefix: Container(
