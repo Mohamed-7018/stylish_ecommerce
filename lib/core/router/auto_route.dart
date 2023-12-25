@@ -14,7 +14,7 @@ class AppRouter extends $AppRouter {
         /// a route with the path '/' is configured to navigate to the 'OnBoardingRoute' page.
         CustomRoute(
           path: '/',
-          page: ForgetPasswordRoute.page,
+          page: SignUpRoute.page,
 
           /// TransitionsBuilder determines how the page transition animation should be performed.
           /// In this case, the 'slideBottom' transition is used, meaning the new page will slide up from the bottom.
