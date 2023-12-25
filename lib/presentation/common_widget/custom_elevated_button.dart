@@ -72,9 +72,15 @@ class CustomElevatedButton extends BaseButton {
         margin: margin,
         decoration: decoration,
         child: ElevatedButton(
-          style: buttonStyle ?? ElevatedButton.styleFrom(
-            backgroundColor: Get.colorScheme.primary,
-          ),
+          style: buttonStyle ??
+              ButtonStyle(
+                backgroundColor:
+                    MaterialStateProperty.all<Color>(Get.colorScheme.primary),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(4)),
+                ),
+              ),
           onPressed: isDisabled ?? false ? null : onPressed ?? () {},
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,

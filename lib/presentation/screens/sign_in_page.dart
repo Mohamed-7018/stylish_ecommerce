@@ -153,14 +153,7 @@ class SignInPage extends StatelessWidget {
                 CustomElevatedButton(
                   text: "lbl_login".tr(context),
                   margin: EdgeInsets.symmetric(horizontal: 4.horizontal),
-                  buttonStyle: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(
-                        Get.colorScheme.primary),
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                      RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(4)),
-                    ),
-                  ),
+                  
                 ),
                 SizedBox(height: 75.vertical),
                 Text(
