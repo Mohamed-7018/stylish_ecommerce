@@ -192,8 +192,12 @@ class SignUpPage extends StatelessWidget {
                             style: CustomTextStyles.bodySmallGray700,
                           ),
                           TextSpan(
-                            text: "msg_register_button".tr(context),
+                            text: "lbl_register".tr(context),
                             style: CustomTextStyles.bodySmallSecondaryContainer,
+                          ),
+                          TextSpan(
+                            text: "msg_register_button".tr(context),
+                            style: CustomTextStyles.bodySmallGray700,
                           ),
                         ],
                       ),
@@ -276,6 +280,7 @@ class SignUpPage extends StatelessWidget {
                         ),
                       ),
                     ),
+                    
                   ],
                 ),
                 SizedBox(height: 5.vertical),

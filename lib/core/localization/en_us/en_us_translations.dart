@@ -42,12 +42,13 @@ final Map<String, String> enUs = {
   // Sign Up Screen
   "lbl_by_clicking_the": "By clicking the ",
   "lbl_confirmpassword": "ConfirmPassword",
-  "lbl_create_account": "Create Account",
+  "lbl_register" : "Register",
+      "lbl_create_account": "Create Account",
   "msg_by_clicking_the":
       "By clicking the Register button, you agree to the public offer",
   "msg_create_an_account2": "Create an \naccount",
   "msg_i_already_have_an": "I Already Have an Account",
-  "msg_register_button": "Register button, you agree to the public offer",
+  "msg_register_button": " button, you agree to the public offer",
 
   // Forgot password Screen
   "lbl_submit": "Submit",
