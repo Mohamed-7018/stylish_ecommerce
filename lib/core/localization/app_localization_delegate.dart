@@ -1,6 +1,8 @@
-
+// 🐦 Flutter imports:
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+
+// 🌎 Project imports:
 import 'package:stylish_ecommerce/core/localization/app_localization.dart';
 
 /// A LocalizationsDelegate responsible for loading AppLocalization instances.

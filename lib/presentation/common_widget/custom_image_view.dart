@@ -1,9 +1,13 @@
 // ignore_for_file: must_be_immutable
 
+// 🎯 Dart imports:
 import 'dart:io';
 
-import 'package:cached_network_image/cached_network_image.dart';
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 📦 Package imports:
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 /// A customizable image view widget that supports different image types (SVG, PNG, network, file).

@@ -1,4 +1,7 @@
+// 📦 Package imports:
 import 'package:dio/dio.dart';
+
+// 🌎 Project imports:
 import 'package:stylish_ecommerce/data/model/api_result/api_result.dart';
 import 'package:stylish_ecommerce/data/model/network_exception/network_exception.dart';
 import 'package:stylish_ecommerce/data/model/user_api/sign_in/sign_in_request_body.dart';

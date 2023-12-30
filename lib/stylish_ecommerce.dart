@@ -1,6 +1,11 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 📦 Package imports:
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+// 🌎 Project imports:
 import 'package:stylish_ecommerce/core/helper/custom_scroll_behaviour.dart';
 import 'package:stylish_ecommerce/core/helper/navigator_helper.dart';
 import 'package:stylish_ecommerce/core/localization/app_localization_delegate.dart';

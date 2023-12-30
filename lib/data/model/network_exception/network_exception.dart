@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 // 📦 Package imports:
 import 'package:dio/dio.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+
+// 🌎 Project imports:
 import 'package:stylish_ecommerce/data/model/error_model/error_model.dart';
 
 part 'network_exception.freezed.dart';

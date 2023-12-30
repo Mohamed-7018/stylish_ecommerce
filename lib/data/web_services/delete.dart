@@ -1,7 +1,8 @@
 // 📦 Package imports:
 import 'package:dio/dio.dart';
-import 'package:stylish_ecommerce/data/web_services/http_request.dart';
 
+// 🌎 Project imports:
+import 'package:stylish_ecommerce/data/web_services/http_request.dart';
 
 /// Concrete implementation of the [HttpMethod] abstract class for performing HTTP DELETE requests.
 class DeleteMethod implements HttpMethod {

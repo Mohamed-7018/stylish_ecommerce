@@ -1,9 +1,11 @@
 /// The `app_theme` library provides theme configurations and common theme components for the application.
 library app_theme;
 
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:stylish_ecommerce/core/utils/values.dart';
 
+// 🌎 Project imports:
+import 'package:stylish_ecommerce/core/utils/values.dart';
 
 /// This part of the library includes the light theme configuration.
 /// It defines the color scheme, typography, and other visual elements for the light theme.

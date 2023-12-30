@@ -1,9 +1,9 @@
 // 🐦 Flutter imports:
 import 'package:flutter/cupertino.dart';
-import 'package:stylish_ecommerce/core/helper/navigator_helper.dart';
-import 'package:stylish_ecommerce/core/localization/ar_ksa/ar_ksa_translations.dart';
 
 // 🌎 Project imports:
+import 'package:stylish_ecommerce/core/helper/navigator_helper.dart';
+import 'package:stylish_ecommerce/core/localization/ar_ksa/ar_ksa_translations.dart';
 import 'en_us/en_us_translations.dart';
 
 /// A class responsible for managing app localization based on the selected locale.

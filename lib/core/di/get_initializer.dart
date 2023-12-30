@@ -1,5 +1,8 @@
+// 📦 Package imports:
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
+
+// 🌎 Project imports:
 import 'package:stylish_ecommerce/core/helper/share_prefs_helper.dart';
 import 'package:stylish_ecommerce/core/networking/dio.dart';
 import 'package:stylish_ecommerce/core/router/app_router.dart';

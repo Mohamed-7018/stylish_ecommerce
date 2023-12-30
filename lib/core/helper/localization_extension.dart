@@ -1,5 +1,4 @@
-
-import 'package:flutter/material.dart';
+// 🌎 Project imports:
 import 'package:stylish_ecommerce/core/localization/app_localization.dart';
 
 /// Extension method to localize strings conveniently
