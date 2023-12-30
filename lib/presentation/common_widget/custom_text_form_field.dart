@@ -25,7 +25,9 @@ class CustomTextFormField extends StatelessWidget {
     this.borderDecoration,
     this.fillColor,
     this.filled = true,
-    this.validator,
+    required this.validator,
+    this.onEditingComplete,
+    required this.onChanged,
   }) : super(
           key: key,
         );
@@ -91,7 +93,13 @@ class CustomTextFormField extends StatelessWidget {
   final bool? filled;
 
   /// A validator function to validate the input value of the TextFormField.
-  final FormFieldValidator<String>? validator;
+  final Function(String?) validator;
+
+  /// Callback function triggered when editing is complete.
+  final void Function()? onEditingComplete;
+
+  /// Callback function triggered when the value of the TextFormField changes.
+  final void Function(String?) onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -107,6 +115,7 @@ class CustomTextFormField extends StatelessWidget {
   Widget get textFormFieldWidget => SizedBox(
         width: width ?? double.maxFinite,
         child: TextFormField(
+          onEditingComplete: onEditingComplete,
           controller: controller,
           focusNode: focusNode ?? FocusNode(),
           autofocus: autofocus!,
@@ -116,7 +125,10 @@ class CustomTextFormField extends StatelessWidget {
           keyboardType: textInputType,
           maxLines: maxLines ?? 1,
           decoration: decoration,
-          validator: validator,
+          onChanged: onChanged,
+          validator: (value) {
+            return validator(value);
+          },
         ),
       );
 

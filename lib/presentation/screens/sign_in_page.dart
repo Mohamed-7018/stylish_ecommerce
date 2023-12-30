@@ -1,13 +1,18 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:stylish_ecommerce/core/helper/app_regex.dart';
 import 'package:stylish_ecommerce/core/helper/localization_extension.dart';
 import 'package:stylish_ecommerce/core/utils/values.dart';
+import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_Vm/sign_in_vm_cubit.dart';
+import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_Vm/sign_in_vm_state.dart';
+import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_post/sign_in_post_cubit.dart';
+import 'package:stylish_ecommerce/data/model/user_api/sign_in/sign_in_request_body.dart';
 import 'package:stylish_ecommerce/presentation/common_widget/custom_elevated_button.dart';
 import 'package:stylish_ecommerce/presentation/common_widget/custom_icon_button.dart';
 import 'package:stylish_ecommerce/presentation/common_widget/custom_image_view.dart';
 import 'package:stylish_ecommerce/presentation/common_widget/custom_text_form_field.dart';
+import 'package:stylish_ecommerce/presentation/widgets/sign_in_bloc_listener.dart';
 
-@RoutePage()
 class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
 
@@ -18,6 +23,7 @@ class SignInPage extends StatelessWidget {
         backgroundColor: GlobalAppColors.whiteA70001,
         resizeToAvoidBottomInset: false,
         body: Form(
+          key: context.read<SignInViewModelCubit>().formKey,
           child: Container(
             width: double.maxFinite,
             padding: EdgeInsets.symmetric(
@@ -31,7 +37,7 @@ class SignInPage extends StatelessWidget {
                   child: Container(
                     margin: EdgeInsets.only(left: 7.horizontal),
                     child: Text(
-                      "lbl_welcome_back".tr(context),
+                      "lbl_welcome_back".tr,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: Get.textTheme.displaySmall!.copyWith(
@@ -49,9 +55,14 @@ class SignInPage extends StatelessWidget {
                     right: 1.horizontal,
                   ),
                   child: CustomTextFormField(
+                    onChanged: (value) {
+                          context.read<SignInViewModelCubit>().formKey.currentState!.validate();
+                        },
                     fillColor: GlobalAppColors.gray10001,
-                    controller: TextEditingController(),
-                    hintText: "msg_username_or_email".tr(context),
+                    controller: context
+                        .read<SignInViewModelCubit>()
+                        .emailFieldController,
+                    hintText: "msg_username_or_email".tr,
                     textInputType: TextInputType.emailAddress,
                     prefix: Container(
                       margin: EdgeInsets.fromLTRB(
@@ -70,10 +81,9 @@ class SignInPage extends StatelessWidget {
                       maxHeight: 55.vertical,
                     ),
                     validator: (value) {
-                      // if (value == null ||
-                      //     (!isValidEmail(value, isRequired: true))) {
-                      //   return "err_msg_please_enter_valid_email".tr;
-                      // }
+                      if (value == null || (!AppRegex.isEmailValid(value))) {
+                        return "err_msg_please_enter_valid_email".tr;
+                      }
                       return null;
                     },
                     contentPadding: EdgeInsets.only(
@@ -91,73 +101,116 @@ class SignInPage extends StatelessWidget {
                     left: 7.horizontal,
                     right: 1.horizontal,
                   ),
-                  child: CustomTextFormField(
-                    fillColor: GlobalAppColors.gray10001,
-                    controller: TextEditingController(),
-                    hintText: "lbl_password".tr(context),
-                    textInputAction: TextInputAction.done,
-                    textInputType: TextInputType.visiblePassword,
-                    prefix: Container(
-                      margin: EdgeInsets.fromLTRB(
-                        15.horizontal,
-                        17.vertical,
-                        11.horizontal,
-                        18.vertical,
-                      ),
-                      child: CustomImageView(
-                        imagePath: GlobalAppImages.imgTrophy,
-                        height: 20.vertical,
-                        width: 16.horizontal,
-                      ),
-                    ),
-                    prefixConstraints: BoxConstraints(
-                      maxHeight: 55.vertical,
-                    ),
-                    suffix: InkWell(
-                      onTap: () {},
-                      child: Container(
-                        margin: EdgeInsets.fromLTRB(30.horizontal, 18.vertical,
-                            16.horizontal, 17.vertical),
-                        child: CustomImageView(
-                          imagePath: GlobalAppImages.imgEye,
-                          height: 20.adaptSize,
-                          width: 20.adaptSize,
-                        ),
-                      ),
-                    ),
-                    suffixConstraints: BoxConstraints(
-                      maxHeight: 55.vertical,
-                    ),
-                    validator: (value) {
-                      // if (value == null ||
-                      //     (!isValidPassword(value, isRequired: true))) {
-                      //   return "err_msg_please_enter_valid_password".tr;
-                      // }
-                      return null;
+                  child:
+                      BlocBuilder<SignInViewModelCubit, SignInViewModelState>(
+                    buildWhen: (previousState, state) {
+                      return state is SignInTogglePasswordState;
                     },
-                    obscureText: false,
-                    contentPadding: EdgeInsets.symmetric(
-                      vertical: 20.vertical,
-                    ),
+                    builder: (context, state) {
+                      return CustomTextFormField(
+                        onChanged: (value) {
+                          context.read<SignInViewModelCubit>().formKey.currentState!.validate();
+                        },
+                        focusNode:
+                            context.read<SignInViewModelCubit>().emailFocusNode,
+                        onEditingComplete: () => context
+                            .read<SignInViewModelCubit>()
+                            .emailEditingControl(),
+                        fillColor: GlobalAppColors.gray10001,
+                        controller: context
+                            .read<SignInViewModelCubit>()
+                            .passwordFieldController,
+                        hintText: "lbl_password".tr,
+                        textInputAction: TextInputAction.done,
+                        textInputType: TextInputType.visiblePassword,
+                        prefix: Container(
+                          margin: EdgeInsets.fromLTRB(
+                            15.horizontal,
+                            17.vertical,
+                            11.horizontal,
+                            18.vertical,
+                          ),
+                          child: CustomImageView(
+                            imagePath: GlobalAppImages.imgTrophy,
+                            height: 20.vertical,
+                            width: 16.horizontal,
+                          ),
+                        ),
+                        prefixConstraints: BoxConstraints(
+                          maxHeight: 55.vertical,
+                        ),
+                        suffix: InkWell(
+                          onTap: () {
+                            context
+                                .read<SignInViewModelCubit>()
+                                .togglePasswordState();
+                          },
+                          child: Container(
+                            margin: EdgeInsets.fromLTRB(30.horizontal,
+                                18.vertical, 16.horizontal, 17.vertical),
+                            child: CustomImageView(
+                              imagePath: GlobalAppImages.imgEye,
+                              height: 20.adaptSize,
+                              width: 20.adaptSize,
+                            ),
+                          ),
+                        ),
+                        suffixConstraints: BoxConstraints(
+                          maxHeight: 55.vertical,
+                        ),
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return "err_msg_please_enter_valid_password".tr;
+                          }
+                          return null;
+                        },
+                        obscureText: context
+                            .read<SignInViewModelCubit>()
+                            .isPasswordHidden,
+                        contentPadding: EdgeInsets.symmetric(
+                          vertical: 20.vertical,
+                        ),
+                      );
+                    },
                   ),
                 ),
                 SizedBox(height: 10.vertical),
                 Align(
                   alignment: Alignment.centerRight,
                   child: Text(
-                    "msg_forgot_password".tr(context),
+                    "msg_forgot_password".tr,
                     style: CustomTextStyles.bodySmallPrimary,
                   ),
                 ),
                 SizedBox(height: 50.vertical),
                 CustomElevatedButton(
-                  text: "lbl_login".tr(context),
+                  onPressed: () {
+                    if (context
+                        .read<SignInViewModelCubit>()
+                        .formKey
+                        .currentState!
+                        .validate()) {
+                      context.read<SignInPostCubit>().login(
+                            loginRequestBody: SignInRequestBody(
+                              email: context
+                                  .read<SignInViewModelCubit>()
+                                  .emailFieldController
+                                  .text,
+                              password: context
+                                  .read<SignInViewModelCubit>()
+                                  .passwordFieldController
+                                  .text,
+                            ),
+                          );
+                    }
+                  },
+                  text: "lbl_login".tr,
                   margin: EdgeInsets.symmetric(horizontal: 4.horizontal),
-                  
                 ),
+                const SignInBlocListener(),
                 SizedBox(height: 75.vertical),
                 Text(
-                  "msg_or_continue_with".tr(context),
+                  "msg_or_continue_with".tr,
                   style: CustomTextStyles.labelLargeGray70001,
                 ),
                 SizedBox(height: 19.vertical),
@@ -210,13 +263,13 @@ class SignInPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "msg_create_an_account".tr(context),
+                      "msg_create_an_account".tr,
                       style: CustomTextStyles.bodyMediumGray70001,
                     ),
                     Padding(
                       padding: EdgeInsets.only(left: 5.horizontal),
                       child: Text(
-                        "lbl_sign_up".tr(context),
+                        "lbl_sign_up".tr,
                         style: CustomTextStyles.titleSmallPrimary.copyWith(
                           decoration: TextDecoration.underline,
                         ),
@@ -225,6 +278,7 @@ class SignInPage extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 5.vertical),
+                
               ],
             ),
           ),

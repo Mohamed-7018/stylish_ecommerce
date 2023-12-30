@@ -1,28 +1,28 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:stylish_ecommerce/core/di/get_initializer.dart';
 import 'package:stylish_ecommerce/core/helper/custom_scroll_behaviour.dart';
+import 'package:stylish_ecommerce/core/helper/navigator_helper.dart';
 import 'package:stylish_ecommerce/core/localization/app_localization_delegate.dart';
-import 'package:stylish_ecommerce/core/router/auto_route.dart';
+import 'package:stylish_ecommerce/core/router/app_router.dart';
+import 'package:stylish_ecommerce/core/router/routes.dart';
 import 'package:stylish_ecommerce/core/utils/values.dart';
 
-
+/// The main application widget for Stylish Ecommerce.
 class StylishEcommerce extends StatelessWidget {
-  const StylishEcommerce({super.key});
+  /// The router for navigating between screens in the app.
+  final AppRouter appRouter;
 
+  /// Constructs a new instance of StylishEcommerce.
+  const StylishEcommerce({Key? key, required this.appRouter}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // Retrieve the AppRouter instance using dependency injection.
-    final appRouter = getIt<AppRouter>();
-
     // Set the fit size using ScreenUtilInit for responsive design.
     return ScreenUtilInit(
-      designSize:Size(figmaDesignWidth.toDouble(), figmaDesignHeight.toDouble()),
-      // Use builder only if you need to use library outside ScreenUtilInit context
-      builder: (_, child) => MaterialApp.router(
+      designSize: Size(figmaDesignWidth.toDouble(), figmaDesignHeight.toDouble()),
+      // Use builder only if you need to use the library outside ScreenUtilInit context
+      builder: (_, child) => MaterialApp(
         /// Title displayed in the operating system's task switcher.
         title: 'Stylish Ecommerce',
 
@@ -37,9 +37,6 @@ class StylishEcommerce extends StatelessWidget {
           GlobalCupertinoLocalizations.delegate,
         ],
 
-        /// Parses route information to route data.
-        routeInformationParser: appRouter.defaultRouteParser(),
-
         /// Specifies the supported locales for the app.
         supportedLocales: const [
           Locale(
@@ -51,8 +48,14 @@ class StylishEcommerce extends StatelessWidget {
         /// Customizes scrolling behavior using CustomScrollBehaviour.
         scrollBehavior: CustomScrollBehaviour(),
 
-        /// Delegates the routing handling to the appRouter.
-        routerDelegate: appRouter.delegate(),
+        /// The initial route when the app starts.
+        initialRoute: Routes.signInPage,
+
+        /// Generates routes for the app based on route settings.
+        onGenerateRoute: appRouter.generateRoute,
+
+        /// The key for the global Navigator widget.
+        navigatorKey: NavigatorHelper.navigatorKey,
       ),
     );
   }

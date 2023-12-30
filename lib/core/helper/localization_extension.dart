@@ -7,6 +7,6 @@ extension LocalizationExtension on String {
   /// Getter method 'tr' to access localized strings.
   ///
   /// Returns the localized string corresponding to the provided key.
-  String tr(BuildContext context) =>
-      AppLocalization.of(context).getString(this);
+  String get tr =>
+      AppLocalization.of().getString(this);
 }

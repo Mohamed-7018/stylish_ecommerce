@@ -13,15 +13,13 @@ Dio createAndSetupDio() {
 
   // Configure Dio options
   dio
-    ..options.baseUrl = 'https://efood-admin.6amtech.com'
+    ..options.baseUrl = 'https://student.valuxapps.com/api'
     ..options.connectTimeout = const Duration(seconds: 30)
     ..options.receiveTimeout = const Duration(seconds: 30)
     ..httpClientAdapter
     ..options.headers = {
-      'Content-Type': 'application/json; charset=UTF-8',
-      'branch-id': '1',
-      'X-localization': 'en',
-      'Authorization': 'Bearer',
+      'lang': 'en',
+      'Content-Type': 'application/json',
     };
 
   // Adding PrettyDioLogger interceptor for logging requests and responses

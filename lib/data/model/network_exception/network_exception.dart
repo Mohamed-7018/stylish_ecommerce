@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 // 📦 Package imports:
 import 'package:dio/dio.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:stylish_ecommerce/data/model/error_model/error_model.dart';
 
 part 'network_exception.freezed.dart';
 
@@ -77,16 +78,20 @@ abstract class NetworkExceptions with _$NetworkExceptions {
   /// Parameters:
   /// - [response]: The HTTP response.
   static NetworkExceptions handleResponse(Response? response) {
-    // List<ErrorModel> listOfErrors =
-    //     List.from(response?.data).map((e) => ErrorModel.fromJson(e)).toList();
-    // String allErrors = listOfErrors
-    //     .map((e) => "${e.field} : ${e.message}  ")
-    //     .toString()
-    //     .replaceAll("(", "")
-    //     .replaceAll(")", "");
+    List<ErrorModel> listOfErrors =
+        List.from(response?.data).map((e) => ErrorModel.fromJson(e)).toList();
+    String allErrors = listOfErrors
+        .map((e) => " ${e.message}  ")
+        .toString()
+        .replaceAll("(", "")
+        .replaceAll(")", "");
     int statusCode = response?.statusCode ?? 0;
     switch (statusCode) {
       // Handle specific status codes and return corresponding exceptions.
+      case 200:
+        return NetworkExceptions.defaultError(
+          "Received invalid status code: $allErrors",
+        );
       case 400:
       case 401:
       case 403:

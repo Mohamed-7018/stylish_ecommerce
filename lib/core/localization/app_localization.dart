@@ -1,5 +1,6 @@
 // 🐦 Flutter imports:
 import 'package:flutter/cupertino.dart';
+import 'package:stylish_ecommerce/core/helper/navigator_helper.dart';
 import 'package:stylish_ecommerce/core/localization/ar_ksa/ar_ksa_translations.dart';
 
 // 🌎 Project imports:
@@ -22,10 +23,9 @@ class AppLocalization {
   /// Retrieves the AppLocalization instance based on the current context.
   ///
   /// Returns the AppLocalization instance obtained from the current context.
-  static AppLocalization of(BuildContext context) {
-    return Localizations.of<AppLocalization>(context, AppLocalization)!;
-    // return Localizations.of<AppLocalization>(
-    //     NavigatorHelper.autoRouteNavigatorKey.currentContext!, AppLocalization)!;
+  static AppLocalization of() {
+    return Localizations.of<AppLocalization>(
+        NavigatorHelper.navigatorKey.currentContext!, AppLocalization)!;
   }
 
   /// Retrieves a list of supported languages from the localized values.

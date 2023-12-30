@@ -1,4 +1,3 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:stylish_ecommerce/core/helper/localization_extension.dart';
 import 'package:stylish_ecommerce/core/utils/values.dart';
@@ -6,7 +5,6 @@ import 'package:stylish_ecommerce/presentation/common_widget/custom_elevated_but
 import 'package:stylish_ecommerce/presentation/common_widget/custom_image_view.dart';
 import 'package:stylish_ecommerce/presentation/common_widget/custom_text_form_field.dart';
 
-@RoutePage()
 class ForgetPasswordPage extends StatelessWidget {
   const ForgetPasswordPage({super.key});
 
@@ -32,7 +30,7 @@ class ForgetPasswordPage extends StatelessWidget {
                 SizedBox(
                   // width: 203.horizontal,
                   child: Text(
-                    "msg_forgot_password2".tr(context),
+                    "msg_forgot_password2".tr,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: Get.textTheme.displaySmall!.copyWith(
@@ -44,9 +42,12 @@ class ForgetPasswordPage extends StatelessWidget {
                   height: 25.vertical,
                 ),
                 CustomTextFormField(
+                  onChanged: (value){
+                    
+                  },
                   fillColor: GlobalAppColors.gray10001,
                   controller: TextEditingController(),
-                  hintText: "msg_enter_your_email".tr(context),
+                  hintText: "msg_enter_your_email".tr,
                   textInputAction: TextInputAction.done,
                   textInputType: TextInputType.emailAddress,
                   prefix: Container(
@@ -83,7 +84,7 @@ class ForgetPasswordPage extends StatelessWidget {
                   width: 261.horizontal,
                   margin: EdgeInsets.only(right: 54.horizontal),
                   child: Text(
-                    "msg_we_will_send_you".tr(context),
+                    "msg_we_will_send_you".tr,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: CustomTextStyles.bodySmallGray700_1,
@@ -91,7 +92,7 @@ class ForgetPasswordPage extends StatelessWidget {
                 ),
                 SizedBox(height: 41.vertical),
                 CustomElevatedButton(
-                  text: "lbl_submit".tr(context),
+                  text: "lbl_submit".tr,
                 ),
                 SizedBox(height: 5.vertical),
               ],
