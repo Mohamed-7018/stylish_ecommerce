@@ -1,14 +1,13 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
-
 // 🌎 Project imports:
 import 'package:stylish_ecommerce/core/helper/localization_extension.dart';
 import 'package:stylish_ecommerce/core/utils/values.dart';
-import 'package:stylish_ecommerce/presentation/widgets/sign_in/create_new_account.dart';
-import 'package:stylish_ecommerce/presentation/widgets/sign_in/email_and_password_textfield.dart';
-import 'package:stylish_ecommerce/presentation/widgets/sign_in/login_btn.dart';
-import 'package:stylish_ecommerce/presentation/widgets/sign_in/sign_in_bloc_listener.dart';
+import 'package:stylish_ecommerce/presentation/widgets/registeration_widgets/sign_in/create_new_account.dart';
+import 'package:stylish_ecommerce/presentation/widgets/registeration_widgets/sign_in/email_and_password_textfield.dart';
+import 'package:stylish_ecommerce/presentation/widgets/registeration_widgets/sign_in/login_btn.dart';
+import 'package:stylish_ecommerce/presentation/widgets/registeration_widgets/sign_in/sign_in_bloc_listener.dart';
 import 'package:stylish_ecommerce/presentation/widgets/registeration_widgets/social_login_icons.dart';
 
 /// A screen for user sign-in, allowing users to log in to their accounts.
