@@ -51,7 +51,7 @@ class SignInViewModelCubit extends Cubit<SignInViewModelState> with AppRegex {
   FocusNode get passwordFocusNode => _passwordFocusNode;
 
   /// GlobalKey for the Sign In form.
-  final formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   /// Flag to track the visibility state of the password.
   bool _isPasswordHidden = false;

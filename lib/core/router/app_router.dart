@@ -9,10 +9,10 @@ import 'package:stylish_ecommerce/core/di/get_initializer.dart';
 import 'package:stylish_ecommerce/core/router/routes.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_Vm/sign_in_vm_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_post/sign_in_post_cubit.dart';
-import 'package:stylish_ecommerce/presentation/screens/forget_password_page.dart';
+import 'package:stylish_ecommerce/presentation/screens/registeration_screens/forget_password_page.dart';
 import 'package:stylish_ecommerce/presentation/screens/home_screen.dart';
-import 'package:stylish_ecommerce/presentation/screens/sign_in_page.dart';
-import 'package:stylish_ecommerce/presentation/screens/sign_up_page.dart';
+import 'package:stylish_ecommerce/presentation/screens/registeration_screens/sign_in_page.dart';
+import 'package:stylish_ecommerce/presentation/screens/registeration_screens/sign_up_page.dart';
 
 /// Handles the navigation and route generation for the application.
 class AppRouter {

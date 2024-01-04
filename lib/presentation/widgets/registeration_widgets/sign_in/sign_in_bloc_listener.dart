@@ -11,6 +11,9 @@ import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_post/sign_
 import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_post/sign_in_post_state.dart';
 import 'package:stylish_ecommerce/data/model/network_exception/network_exception.dart';
 
+/// A widget that listens to the state changes in the [SignInPostCubit] and
+/// performs actions accordingly, such as showing a loading indicator,
+/// navigating to the home page on successful login, or displaying an error.
 class SignInBlocListener extends StatelessWidget {
   const SignInBlocListener({super.key});
 
