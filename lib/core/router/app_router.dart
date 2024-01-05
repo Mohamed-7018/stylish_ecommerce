@@ -9,6 +9,8 @@ import 'package:stylish_ecommerce/core/di/get_initializer.dart';
 import 'package:stylish_ecommerce/core/router/routes.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_Vm/sign_in_vm_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_post/sign_in_post_cubit.dart';
+import 'package:stylish_ecommerce/data/buisness_logic/sign_up/sign_up_post/sign_up_post_cubit.dart';
+import 'package:stylish_ecommerce/data/buisness_logic/sign_up/sign_up_vm/sign_up_vm_cubit.dart';
 import 'package:stylish_ecommerce/presentation/screens/home_screen.dart';
 import 'package:stylish_ecommerce/presentation/screens/registeration_screens/forget_password_page.dart';
 import 'package:stylish_ecommerce/presentation/screens/registeration_screens/sign_in_page.dart';
@@ -35,7 +37,17 @@ class AppRouter {
         );
       case Routes.signUpPage:
         return MaterialPageRoute(
-          builder: (context) => const SignUpPage(),
+          builder: (context) => MultiBlocProvider(
+            providers: [
+              BlocProvider<SignUpViewModelCubit>(
+                create: (context) => getIt(),
+              ),
+              BlocProvider<SignUpPostCubit>(
+                create: (context) => getIt(),
+              ),
+            ],
+            child: const SignUpPage(),
+          ),
         );
       case Routes.fogetPasswordPage:
         return MaterialPageRoute(

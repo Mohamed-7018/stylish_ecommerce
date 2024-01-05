@@ -194,6 +194,10 @@ class GlobalAppImages {
 
   static String imgTrophy = '$imagePath/img_trophy.svg';
 
+  static String igNameIcon = '$imagePath/name_icon.svg';
+
+  static String imgPhone = '$imagePath/phone_icon.svg';
+
   static String imgEye = '$imagePath/img_eye.svg';
 
   static String imgGoogle = '$imagePath/img_google.png';

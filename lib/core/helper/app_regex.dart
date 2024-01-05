@@ -8,6 +8,11 @@ mixin AppRegex {
         .hasMatch(email);
   }
 
+  /// Checks if the provided [text] is empty or not.
+  static bool isEmpty(String text) {
+    return text.isEmpty;
+  }
+
   /// Checks if the provided [password] meets the criteria for a strong password.
   ///
   /// Returns `true` if the password is strong, otherwise `false`.

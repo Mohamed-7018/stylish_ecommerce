@@ -315,6 +315,8 @@ final Map<String, String> enUs = {
   "msg_or_continue_with": "- OR Continue with -",
   "msg_search_any_product": "Search any Product..",
   "msg_username_or_email": "Username or Email",
+  "msg_name" : "Name",
+  "msg_phone_number" : "Phone number",
   "msg_women_s_casual_wear": "Women’s Casual Wear",
 
 // Network Error String
@@ -322,6 +324,8 @@ final Map<String, String> enUs = {
   "msg_something_went_wrong": "Something Went Wrong!",
 
   // Validation Error String
+  'err_msg_please_enter_valid_name': 'Pleade enter valid name',
+  'err_msg_please_enter_valid_phone': 'Pleade enter valid phone',
   "err_msg_please_enter_valid_email": "Please enter valid email",
   "err_msg_please_enter_valid_password": "Please enter valid password",
   "lbl_got_it" : "Got it",

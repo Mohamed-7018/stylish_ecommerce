@@ -8,7 +8,10 @@ import 'package:stylish_ecommerce/core/networking/dio.dart';
 import 'package:stylish_ecommerce/core/router/app_router.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_Vm/sign_in_vm_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_post/sign_in_post_cubit.dart';
+import 'package:stylish_ecommerce/data/buisness_logic/sign_up/sign_up_post/sign_up_post_cubit.dart';
+import 'package:stylish_ecommerce/data/buisness_logic/sign_up/sign_up_vm/sign_up_vm_cubit.dart';
 import 'package:stylish_ecommerce/data/repository/sign_in_post_repo.dart';
+import 'package:stylish_ecommerce/data/repository/sign_up_post_repo.dart';
 import 'package:stylish_ecommerce/data/web_services/delete.dart';
 import 'package:stylish_ecommerce/data/web_services/dio_factory.dart';
 import 'package:stylish_ecommerce/data/web_services/get.dart';
@@ -22,7 +25,6 @@ void setupGetIt() {
   // Register shared preferences
   getIt.registerLazySingleton<PrefUtils>(() => PrefUtils());
 
-   
   // Register app router
   getIt.registerSingleton<AppRouter>(AppRouter());
 
@@ -36,12 +38,17 @@ void setupGetIt() {
   getIt.registerLazySingleton<PutMethod>(() => PutMethod());
   getIt.registerLazySingleton<PostMethod>(() => PostMethod());
 
-  // sign-in 
+  // sign-in
   getIt.registerLazySingleton<SignInPostRepository>(
       () => SignInPostRepository(postMethod: getIt(), dio: getIt()));
-  getIt.registerLazySingleton<SignInViewModelCubit>(() => SignInViewModelCubit());
+  getIt.registerLazySingleton<SignInViewModelCubit>(
+      () => SignInViewModelCubit());
   getIt.registerLazySingleton<SignInPostCubit>(() => SignInPostCubit(getIt()));
 
-
-
+  // sign-up
+  getIt.registerLazySingleton<SignUpPostRepository>(
+      () => SignUpPostRepository(postMethod: getIt(), dio: getIt()));
+  getIt.registerLazySingleton<SignUpViewModelCubit>(
+      () => SignUpViewModelCubit());
+  getIt.registerLazySingleton<SignUpPostCubit>(() => SignUpPostCubit(getIt()));
 }
