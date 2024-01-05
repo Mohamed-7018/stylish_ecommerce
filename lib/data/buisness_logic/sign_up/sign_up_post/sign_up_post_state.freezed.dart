@@ -467,6 +467,8 @@ abstract class _$$ErrorImplCopyWith<T, $Res> {
       __$$ErrorImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({NetworkExceptions networkExceptions});
+
+  $NetworkExceptionsCopyWith<$Res> get networkExceptions;
 }
 
 /// @nodoc
@@ -480,14 +482,22 @@ class __$$ErrorImplCopyWithImpl<T, $Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? networkExceptions = freezed,
+    Object? networkExceptions = null,
   }) {
     return _then(_$ErrorImpl<T>(
-      freezed == networkExceptions
+      null == networkExceptions
           ? _value.networkExceptions
           : networkExceptions // ignore: cast_nullable_to_non_nullable
               as NetworkExceptions,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NetworkExceptionsCopyWith<$Res> get networkExceptions {
+    return $NetworkExceptionsCopyWith<$Res>(_value.networkExceptions, (value) {
+      return _then(_value.copyWith(networkExceptions: value));
+    });
   }
 }
 
@@ -509,13 +519,12 @@ class _$ErrorImpl<T> implements Error<T> {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ErrorImpl<T> &&
-            const DeepCollectionEquality()
-                .equals(other.networkExceptions, networkExceptions));
+            (identical(other.networkExceptions, networkExceptions) ||
+                other.networkExceptions == networkExceptions));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(networkExceptions));
+  int get hashCode => Object.hash(runtimeType, networkExceptions);
 
   @JsonKey(ignore: true)
   @override
