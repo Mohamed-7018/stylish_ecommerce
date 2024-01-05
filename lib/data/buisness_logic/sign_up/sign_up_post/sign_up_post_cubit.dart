@@ -1,7 +1,7 @@
 // 📦 Package imports:
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:stylish_ecommerce/core/utils/values.dart';
-import 'package:stylish_ecommerce/data/buisness_logic/sign_up/sign_up_post_state.dart';
+import 'package:stylish_ecommerce/data/buisness_logic/sign_up/sign_up_post/sign_up_post_state.dart';
 import 'package:stylish_ecommerce/data/model/network_exception/network_exception.dart';
 import 'package:stylish_ecommerce/data/model/user_api/register/sign_up_request_body.dart';
 import 'package:stylish_ecommerce/data/model/user_api/register/sign_up_response_model.dart';
