@@ -1,7 +1,11 @@
+// 🐦 Flutter imports:
 import 'package:flutter/widgets.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:stylish_ecommerce/core/helper/navigator_helper.dart';
 
+// 📦 Package imports:
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+// 🌎 Project imports:
+import 'package:stylish_ecommerce/core/helper/navigator_helper.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_up/sign_up_vm/sign_up_vm_state.dart';
 
 /// Cubit responsible for managing the state and business logic

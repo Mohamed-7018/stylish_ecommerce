@@ -1,5 +1,7 @@
 // 📦 Package imports:
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+// 🌎 Project imports:
 import 'package:stylish_ecommerce/core/utils/values.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_up/sign_up_post/sign_up_post_state.dart';
 import 'package:stylish_ecommerce/data/model/network_exception/network_exception.dart';

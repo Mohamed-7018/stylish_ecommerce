@@ -1,6 +1,6 @@
-
 // 📦 Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+
 // 🌎 Project imports:
 import 'package:stylish_ecommerce/data/model/network_exception/network_exception.dart';
 
