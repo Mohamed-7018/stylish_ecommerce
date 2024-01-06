@@ -1,4 +1,7 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 🌎 Project imports:
 import 'package:stylish_ecommerce/core/utils/values.dart';
 
 /// A custom widget for rendering a subtitle in the app bar.

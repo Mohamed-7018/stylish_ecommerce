@@ -1,10 +1,8 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 // 🌎 Project imports:
 import 'package:stylish_ecommerce/core/utils/values.dart';
-import 'package:stylish_ecommerce/data/buisness_logic/sign_up/sign_up_vm/sign_up_vm_cubit.dart';
 import 'package:stylish_ecommerce/presentation/widgets/registeration_widgets/sign_up/email_text_field.dart';
 import 'package:stylish_ecommerce/presentation/widgets/registeration_widgets/sign_up/name_text_field.dart';
 import 'package:stylish_ecommerce/presentation/widgets/registeration_widgets/sign_up/password_text_field.dart';

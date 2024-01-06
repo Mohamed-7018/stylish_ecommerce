@@ -1,4 +1,7 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 🌎 Project imports:
 import 'package:stylish_ecommerce/core/utils/values.dart';
 
 /// A custom app bar that allows fine-grained customization of its appearance.

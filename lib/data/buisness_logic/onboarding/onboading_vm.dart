@@ -1,4 +1,7 @@
+// 📦 Package imports:
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+// 🌎 Project imports:
 import 'package:stylish_ecommerce/core/utils/values.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/onboarding/onboarding_vm_cubit.dart';
 import 'package:stylish_ecommerce/data/model/onboarding/onboarding_screen_model.dart';

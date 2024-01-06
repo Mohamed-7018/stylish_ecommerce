@@ -1,8 +1,12 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 🌎 Project imports:
 import 'package:stylish_ecommerce/core/helper/localization_extension.dart';
 import 'package:stylish_ecommerce/core/utils/values.dart';
 import 'package:stylish_ecommerce/data/model/onboarding/onboarding_screen_model.dart';
 import 'package:stylish_ecommerce/presentation/common_widget/custom_image_view.dart';
+
 /// A widget representing an individual onboarding page item.
 ///
 /// * [onboardingScreenModel] - The data model containing information about the onboarding page.
