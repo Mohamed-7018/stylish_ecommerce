@@ -26,7 +26,9 @@ final Map<String, String> enUs = {
 
   // Splash screen Two Screen
   "lbl_1_3": "1/3", "lbl_3": "/3", "lbl_choose_products": "Choose Products",
-
+   "lbl_one" : "1",
+   "lbl_two" : "2",
+   "lbl_three" : "3",
   // Splash screen One Screen
   "lbl_2_3": "2/3", "lbl_make_payment": "Make Payment",
 

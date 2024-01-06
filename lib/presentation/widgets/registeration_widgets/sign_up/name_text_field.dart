@@ -14,13 +14,14 @@ import 'package:stylish_ecommerce/presentation/common_widget/custom_text_form_fi
 
 /// Widget for entering and validating Name during the sign-up process.
 class NameTextField extends StatelessWidget {
-  const NameTextField({super.key});
+  final GlobalKey<FormState> formKey;
+  const NameTextField({super.key, required this.formKey});
 
   @override
   Widget build(BuildContext context) {
     return CustomTextFormField(
       onChanged: (value) {
-        context.read<SignUpViewModelCubit>().formKey.currentState!.validate();
+        formKey.currentState!.validate();
       },
       fillColor: GlobalAppColors.gray10001,
       controller: context.read<SignUpViewModelCubit>().nameFieldController,

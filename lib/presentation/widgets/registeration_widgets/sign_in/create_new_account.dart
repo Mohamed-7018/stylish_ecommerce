@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 // 🌎 Project imports:
 import 'package:stylish_ecommerce/core/helper/localization_extension.dart';
+import 'package:stylish_ecommerce/core/router/routes.dart';
 import 'package:stylish_ecommerce/core/utils/values.dart';
 
 /// A widget that displays a "Create New Account" link with localized text.
@@ -19,12 +20,17 @@ class CreateNewAccount extends StatelessWidget {
           "msg_create_an_account".tr,
           style: CustomTextStyles.bodyMediumGray70001,
         ),
-        Padding(
-          padding: EdgeInsets.only(left: 5.horizontal),
-          child: Text(
-            "lbl_sign_up".tr,
-            style: CustomTextStyles.titleSmallPrimary.copyWith(
-              decoration: TextDecoration.underline,
+        GestureDetector(
+          onTap: () {
+            Navigator.of(context).pushNamed(Routes.signUpPage);
+          },
+          child: Padding(
+            padding: EdgeInsets.only(left: 5.horizontal),
+            child: Text(
+              "lbl_sign_up".tr,
+              style: CustomTextStyles.titleSmallPrimary.copyWith(
+                decoration: TextDecoration.underline,
+              ),
             ),
           ),
         ),

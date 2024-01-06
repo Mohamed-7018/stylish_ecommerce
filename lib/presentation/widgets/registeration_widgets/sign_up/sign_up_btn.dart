@@ -14,17 +14,15 @@ import 'package:stylish_ecommerce/presentation/common_widget/custom_elevated_but
 
 /// Button widget for submitting the sign-up form.
 class SignUpButton extends StatelessWidget {
-  const SignUpButton({super.key});
+  final GlobalKey<FormState> formKey;
+
+  const SignUpButton({super.key, required this.formKey});
 
   @override
   Widget build(BuildContext context) {
     return CustomElevatedButton(
       onPressed: () {
-        if (context
-            .read<SignUpViewModelCubit>()
-            .formKey
-            .currentState!
-            .validate()) {
+        if (formKey.currentState!.validate()) {
           context.read<SignUpPostCubit>().signup(
                 signUpRequestBody: SignUpRequestBody(
                   name: context

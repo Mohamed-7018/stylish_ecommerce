@@ -16,7 +16,8 @@ import 'package:stylish_ecommerce/presentation/common_widget/custom_text_form_fi
 /// A widget that combines an email input field and a password input field
 /// for the sign-in process.
 class EmailAndPasswordTextField extends StatefulWidget {
-  const EmailAndPasswordTextField({super.key});
+  final GlobalKey<FormState> formKey;
+  const EmailAndPasswordTextField({super.key, required this.formKey});
 
   @override
   State<EmailAndPasswordTextField> createState() =>
@@ -34,9 +35,10 @@ class _EmailAndPasswordTextFieldState extends State<EmailAndPasswordTextField> {
 
   @override
   Widget build(BuildContext context) {
-    passwordController =  context.read<SignInViewModelCubit>().passwordFieldController;
+    passwordController =
+        context.read<SignInViewModelCubit>().passwordFieldController;
     return Form(
-      key: context.read<SignInViewModelCubit>().formKey,
+      key: widget.formKey,
       child: Column(children: [
         Padding(
           padding: EdgeInsets.only(
@@ -45,11 +47,7 @@ class _EmailAndPasswordTextFieldState extends State<EmailAndPasswordTextField> {
           ),
           child: CustomTextFormField(
             onChanged: (value) {
-              context
-                  .read<SignInViewModelCubit>()
-                  .formKey
-                  .currentState!
-                  .validate();
+              widget.formKey.currentState!.validate();
             },
             fillColor: GlobalAppColors.gray10001,
             controller:
@@ -100,11 +98,7 @@ class _EmailAndPasswordTextFieldState extends State<EmailAndPasswordTextField> {
             builder: (context, state) {
               return CustomTextFormField(
                 onChanged: (value) {
-                  context
-                      .read<SignInViewModelCubit>()
-                      .formKey
-                      .currentState!
-                      .validate();
+                  widget.formKey.currentState!.validate();
                 },
                 focusNode: context.read<SignInViewModelCubit>().emailFocusNode,
                 onEditingComplete: () =>

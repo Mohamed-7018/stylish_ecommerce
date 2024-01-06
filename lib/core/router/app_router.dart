@@ -7,11 +7,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 // 🌎 Project imports:
 import 'package:stylish_ecommerce/core/di/get_initializer.dart';
 import 'package:stylish_ecommerce/core/router/routes.dart';
+import 'package:stylish_ecommerce/data/buisness_logic/onboarding/onboading_vm.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_Vm/sign_in_vm_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_post/sign_in_post_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_up/sign_up_post/sign_up_post_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_up/sign_up_vm/sign_up_vm_cubit.dart';
 import 'package:stylish_ecommerce/presentation/screens/home_screen.dart';
+import 'package:stylish_ecommerce/presentation/screens/onboarding/onboarding_screen.dart';
 import 'package:stylish_ecommerce/presentation/screens/registeration_screens/forget_password_page.dart';
 import 'package:stylish_ecommerce/presentation/screens/registeration_screens/sign_in_page.dart';
 import 'package:stylish_ecommerce/presentation/screens/registeration_screens/sign_up_page.dart';
@@ -21,6 +23,13 @@ class AppRouter {
   /// Generates and returns the appropriate route based on the provided [RouteSettings].
   Route generateRoute(RouteSettings routeSettings) {
     switch (routeSettings.name) {
+      case Routes.onBoardingPage:
+        return MaterialPageRoute(
+          builder: (context) =>  BlocProvider<OnboardingViewModel>(
+            create: (context) => OnboardingViewModel(),
+            child: const OnboardingScreen(),
+          ),
+        );
       case Routes.signInPage:
         return MaterialPageRoute(
           builder: (context) => MultiBlocProvider(

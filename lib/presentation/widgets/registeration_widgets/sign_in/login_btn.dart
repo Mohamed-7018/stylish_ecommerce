@@ -14,15 +14,15 @@ import 'package:stylish_ecommerce/presentation/common_widget/custom_elevated_but
 
 /// A button widget for initiating the login process.
 class LoginButton extends StatelessWidget {
-  const LoginButton({super.key});
+    final GlobalKey<FormState> formKey;
+
+  const LoginButton({super.key, required this.formKey});
 
   @override
   Widget build(BuildContext context) {
     return CustomElevatedButton(
       onPressed: () {
-        if (context
-            .read<SignInViewModelCubit>()
-            .formKey
+        if (formKey
             .currentState!
             .validate()) {
           context.read<SignInPostCubit>().login(

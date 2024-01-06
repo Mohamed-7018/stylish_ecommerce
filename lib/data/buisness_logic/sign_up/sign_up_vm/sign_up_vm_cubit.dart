@@ -90,7 +90,7 @@ class SignUpViewModelCubit extends Cubit<SignUpViewModelState> {
   FocusNode get passwordFocusNode => _passwordFocusNode;
 
   /// GlobalKey for the Sign In form.
-  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  // final GlobalKey<FormState> formKey = GlobalKey<FormState>(debugLabel: 'singup_key');
 
   /// Flag to track the visibility state of the password.
   bool _isPasswordHidden = false;

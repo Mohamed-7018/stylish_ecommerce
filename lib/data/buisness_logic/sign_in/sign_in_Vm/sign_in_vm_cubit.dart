@@ -23,7 +23,8 @@ class SignInViewModelCubit extends Cubit<SignInViewModelState> with AppRegex {
   final TextEditingController _emailFieldController = TextEditingController();
 
   /// Controller for the password text field.
-  final TextEditingController _passwordFieldController = TextEditingController();
+  final TextEditingController _passwordFieldController =
+      TextEditingController();
 
   /// Focus node for the email text field.
   final FocusNode _emailFocusNode = FocusNode();
@@ -51,7 +52,8 @@ class SignInViewModelCubit extends Cubit<SignInViewModelState> with AppRegex {
   FocusNode get passwordFocusNode => _passwordFocusNode;
 
   /// GlobalKey for the Sign In form.
-  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  // final GlobalKey<FormState> formKey =
+  //     GlobalKey<FormState>(debugLabel: 'singin_key');
 
   /// Flag to track the visibility state of the password.
   bool _isPasswordHidden = false;

@@ -14,13 +14,15 @@ import 'package:stylish_ecommerce/presentation/common_widget/custom_text_form_fi
 
 /// Widget for entering and validating email addresses during the sign-up process.
 class EmailTextField extends StatelessWidget {
-  const EmailTextField({super.key});
+    final GlobalKey<FormState> formKey;
+
+  const EmailTextField({super.key, required this.formKey});
 
   @override
   Widget build(BuildContext context) {
     return CustomTextFormField(
       onChanged: (value) {
-        context.read<SignUpViewModelCubit>().formKey.currentState!.validate();
+        formKey.currentState!.validate();
       },
       fillColor: GlobalAppColors.gray10001,
       controller: context.read<SignUpViewModelCubit>().emailFieldController,

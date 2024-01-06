@@ -49,6 +49,8 @@ dependencies:
   retrofit: ^4.0.3
   # reading and writing simple key-value pairs. Wraps NSUserDefaults on iOS and SharedPreferences on Android.
   shared_preferences: ^2.2.2
+  # Customizable animated page indicator with a set of built-in effects.
+  smooth_page_indicator: ^1.1.0
 
 dev_dependencies:
   #A build system for Dart code generation and modular compilation.

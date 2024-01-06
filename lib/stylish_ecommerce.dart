@@ -24,43 +24,46 @@ class StylishEcommerce extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Set the fit size using ScreenUtilInit for responsive design.
-    return ScreenUtilInit(
-      designSize: Size(figmaDesignWidth.toDouble(), figmaDesignHeight.toDouble()),
-      // Use builder only if you need to use the library outside ScreenUtilInit context
-      builder: (_, child) => MaterialApp(
-        /// Title displayed in the operating system's task switcher.
-        title: 'Stylish Ecommerce',
+    return Sizer(
+      builder: (context, orientation, deviceType) => ScreenUtilInit(
+        designSize:
+            Size(figmaDesignWidth.toDouble(), figmaDesignHeight.toDouble()),
+        // Use builder only if you need to use the library outside ScreenUtilInit context
+        builder: (_, child) => MaterialApp(
+          /// Title displayed in the operating system's task switcher.
+          title: 'Stylish Ecommerce',
 
-        /// Controls the display of a banner at the top right of the app's UI in debug mode.
-        debugShowCheckedModeBanner: false,
+          /// Controls the display of a banner at the top right of the app's UI in debug mode.
+          debugShowCheckedModeBanner: false,
 
-        /// Configures the app's localization support.
-        localizationsDelegates: const [
-          AppLocalizationDelegate(),
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-          GlobalCupertinoLocalizations.delegate,
-        ],
+          /// Configures the app's localization support.
+          localizationsDelegates: const [
+            AppLocalizationDelegate(),
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
 
-        /// Specifies the supported locales for the app.
-        supportedLocales: const [
-          Locale(
-            'en',
-            '',
-          ),
-        ],
+          /// Specifies the supported locales for the app.
+          supportedLocales: const [
+            Locale(
+              'en',
+              '',
+            ),
+          ],
 
-        /// Customizes scrolling behavior using CustomScrollBehaviour.
-        scrollBehavior: CustomScrollBehaviour(),
+          /// Customizes scrolling behavior using CustomScrollBehaviour.
+          scrollBehavior: CustomScrollBehaviour(),
 
-        /// The initial route when the app starts.
-        initialRoute: Routes.signUpPage,
+          /// The initial route when the app starts.
+          initialRoute: Routes.onBoardingPage,
 
-        /// Generates routes for the app based on route settings.
-        onGenerateRoute: appRouter.generateRoute,
+          /// Generates routes for the app based on route settings.
+          onGenerateRoute: appRouter.generateRoute,
 
-        /// The key for the global Navigator widget.
-        navigatorKey: NavigatorHelper.navigatorKey,
+          /// The key for the global Navigator widget.
+          navigatorKey: NavigatorHelper.navigatorKey,
+        ),
       ),
     );
   }

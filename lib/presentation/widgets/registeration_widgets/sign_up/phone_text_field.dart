@@ -14,13 +14,15 @@ import 'package:stylish_ecommerce/presentation/common_widget/custom_text_form_fi
 
 /// Widget for entering and validating Phone Number during the sign-up process.
 class PhoneTextField extends StatelessWidget {
-  const PhoneTextField({super.key});
+    final GlobalKey<FormState> formKey;
+
+  const PhoneTextField({super.key, required this.formKey});
 
   @override
   Widget build(BuildContext context) {
     return CustomTextFormField(
       onChanged: (value) {
-        context.read<SignUpViewModelCubit>().formKey.currentState!.validate();
+       formKey.currentState!.validate();
       },
       fillColor: GlobalAppColors.gray10001,
       controller: context.read<SignUpViewModelCubit>().phoneFieldController,

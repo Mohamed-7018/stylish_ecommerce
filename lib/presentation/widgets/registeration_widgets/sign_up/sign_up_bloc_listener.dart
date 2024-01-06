@@ -36,7 +36,7 @@ class SignUpBlocListener extends StatelessWidget {
           },
           success: (loginResponse) {
             Navigator.of(context).pop();
-            Navigator.of(context).pushNamed(Routes.homePage);
+            Navigator.of(context).pushReplacementNamed(Routes.homePage);
           },
           error: (NetworkExceptions error) {
             GlobalAppFunctions.setupErrorState(error.toString());

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 // 🌎 Project imports:
 import 'package:stylish_ecommerce/core/helper/localization_extension.dart';
+import 'package:stylish_ecommerce/core/router/routes.dart';
 import 'package:stylish_ecommerce/core/utils/values.dart';
 
 /// Widget that displays a message indicating the user already has an account
@@ -19,15 +20,20 @@ class AlreadyHaveAccount extends StatelessWidget {
           "msg_i_already_have_an".tr,
           style: CustomTextStyles.bodyMediumPoppinsGray70001,
         ),
-        Padding(
-          padding: EdgeInsets.only(
-            left: 5.horizontal,
-            bottom: 3.vertical,
-          ),
-          child: Text(
-            "lbl_login".tr,
-            style: CustomTextStyles.titleSmallPrimary.copyWith(
-              decoration: TextDecoration.underline,
+        GestureDetector(
+           onTap: () {
+            Navigator.of(context).pushNamed(Routes.signInPage);
+          },
+          child: Padding(
+            padding: EdgeInsets.only(
+              left: 5.horizontal,
+              bottom: 3.vertical,
+            ),
+            child: Text(
+              "lbl_login".tr,
+              style: CustomTextStyles.titleSmallPrimary.copyWith(
+                decoration: TextDecoration.underline,
+              ),
             ),
           ),
         ),

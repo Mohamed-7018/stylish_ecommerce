@@ -17,7 +17,8 @@ class SignUpPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   
+    final GlobalKey<FormState> formKey =
+        GlobalKey<FormState>(debugLabel: 'singup_key');
     return SafeArea(
       child: Scaffold(
         backgroundColor: GlobalAppColors.whiteA70001,
@@ -43,12 +44,12 @@ class SignUpPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 32.vertical),
-                const SignUpForm(),
+                 SignUpForm(formKey: formKey,),
                 SizedBox(height: 19.vertical),
                 const SignUpBlocListener(),
                 const PasswordValidations(),
                 SizedBox(height: 35.vertical),
-                const SignUpButton(),
+                 SignUpButton(formKey: formKey,),
                 SizedBox(height: 35.vertical),
                 const SocialLoginIcons(),
                 SizedBox(height: 29.vertical),

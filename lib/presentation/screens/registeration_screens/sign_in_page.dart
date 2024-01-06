@@ -1,8 +1,10 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 // 🌎 Project imports:
 import 'package:stylish_ecommerce/core/helper/localization_extension.dart';
+import 'package:stylish_ecommerce/core/router/routes.dart';
 import 'package:stylish_ecommerce/core/utils/values.dart';
 import 'package:stylish_ecommerce/presentation/widgets/registeration_widgets/sign_in/create_new_account.dart';
 import 'package:stylish_ecommerce/presentation/widgets/registeration_widgets/sign_in/email_and_password_textfield.dart';
@@ -16,6 +18,8 @@ class SignInPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final GlobalKey<FormState> formKey =
+         GlobalKey<FormState>(debugLabel: 'singin_key');
     return SafeArea(
       child: Scaffold(
         backgroundColor: GlobalAppColors.whiteA70001,
@@ -43,17 +47,26 @@ class SignInPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 32.vertical),
-              const EmailAndPasswordTextField(),
+              EmailAndPasswordTextField(
+                formKey: formKey,
+              ),
               SizedBox(height: 10.vertical),
-              Align(
-                alignment: Alignment.centerRight,
-                child: Text(
-                  "msg_forgot_password".tr,
-                  style: CustomTextStyles.bodySmallPrimary,
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed(Routes.fogetPasswordPage);
+                },
+                child: Align(
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    "msg_forgot_password".tr,
+                    style: CustomTextStyles.bodySmallPrimary,
+                  ),
                 ),
               ),
               SizedBox(height: 50.vertical),
-              const LoginButton(),
+              LoginButton(
+                formKey: formKey,
+              ),
               const SignInBlocListener(),
               SizedBox(height: 75.vertical),
               const SocialLoginIcons(),

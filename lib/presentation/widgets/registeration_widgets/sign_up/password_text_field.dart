@@ -15,7 +15,9 @@ import 'package:stylish_ecommerce/presentation/common_widget/custom_text_form_fi
 
 /// Widget for entering and validating Password during the sign-up process.
 class PasswordTextField extends StatelessWidget {
-  const PasswordTextField({super.key});
+  final GlobalKey<FormState> formKey;
+
+  const PasswordTextField({super.key, required this.formKey});
 
   @override
   Widget build(BuildContext context) {
@@ -26,11 +28,7 @@ class PasswordTextField extends StatelessWidget {
       builder: (context, state) {
         return CustomTextFormField(
           onChanged: (value) {
-            context
-                .read<SignUpViewModelCubit>()
-                .formKey
-                .currentState!
-                .validate();
+            formKey.currentState!.validate();
           },
           fillColor: GlobalAppColors.gray10001,
           controller:
