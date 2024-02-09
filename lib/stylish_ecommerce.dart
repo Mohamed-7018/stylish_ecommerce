@@ -56,7 +56,7 @@ class StylishEcommerce extends StatelessWidget {
           scrollBehavior: CustomScrollBehaviour(),
 
           /// The initial route when the app starts.
-          initialRoute: Routes.onBoardingPage,
+          initialRoute: Routes.getStartedPage,
 
           /// Generates routes for the app based on route settings.
           onGenerateRoute: appRouter.generateRoute,

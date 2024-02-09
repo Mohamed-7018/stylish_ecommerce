@@ -14,4 +14,7 @@ class Routes {
 
   /// Route for the forget home page.
   static const String homePage = '/home';
+
+  /// Route for the forget getStarted page.
+  static const String getStartedPage = '/getStartedPage';
 }

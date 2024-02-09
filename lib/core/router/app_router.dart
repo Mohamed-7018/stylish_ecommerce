@@ -12,6 +12,7 @@ import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_Vm/sign_in
 import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_post/sign_in_post_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_up/sign_up_post/sign_up_post_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_up/sign_up_vm/sign_up_vm_cubit.dart';
+import 'package:stylish_ecommerce/presentation/screens/get_started_screen/get_started_screen.dart';
 import 'package:stylish_ecommerce/presentation/screens/home_screen.dart';
 import 'package:stylish_ecommerce/presentation/screens/onboarding/onboarding_screen.dart';
 import 'package:stylish_ecommerce/presentation/screens/registeration_screens/forget_password_page.dart';
@@ -25,7 +26,7 @@ class AppRouter {
     switch (routeSettings.name) {
       case Routes.onBoardingPage:
         return MaterialPageRoute(
-          builder: (context) =>  BlocProvider<OnboardingViewModel>(
+          builder: (context) => BlocProvider<OnboardingViewModel>(
             create: (context) => OnboardingViewModel(),
             child: const OnboardingScreen(),
           ),
@@ -65,6 +66,10 @@ class AppRouter {
       case Routes.homePage:
         return MaterialPageRoute(
           builder: (context) => const HomePage(),
+        );
+      case Routes.getStartedPage:
+        return MaterialPageRoute(
+          builder: (context) => const GetStartedScreen(),
         );
       default:
         return MaterialPageRoute(
