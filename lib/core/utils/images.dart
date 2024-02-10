@@ -235,7 +235,7 @@ class GlobalAppImages {
 
   static String imgRectangle56 = '$imagePath/img_rectangle_56.png';
 
-  static String imgClose = '$imagePath/img_close.svg';
+  static String imgClose = '$imagePath/img_close.png';
 
   static String imgGroup33732 = '$imagePath/img_group_33732.svg';
 
