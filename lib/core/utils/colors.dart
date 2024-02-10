@@ -6,7 +6,7 @@ class GlobalAppColors {
   static Color get amber600 => const Color(0XFFECB30F);
 
   // Black
-  static Color get black900 => const Color(0XFF010101);
+  static Color get black900 => const Color(0XFFF010101);
   static Color get black90001 => const Color(0XFF0C0A0A);
   static Color get black90002 => const Color(0XFF000000);
 
@@ -30,6 +30,7 @@ class GlobalAppColors {
 
   // Gray
   static Color get gray100 => const Color(0XFFF4F4F4);
+  static Color get gray1001 => const Color(0xFFF9F9F9);
   static Color get gray10001 => const Color(0XFFF3F3F3);
   static Color get gray10002 => const Color(0XFFFBF3F5);
   static Color get gray10003 => const Color(0XFFF2F2F2);

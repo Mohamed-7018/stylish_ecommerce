@@ -5,6 +5,9 @@ class GlobalAppImages {
   // Image folder path
   static String imagePath = 'assets/images';
 
+  // logo
+  static String imgLogoIpsum2551 = '$imagePath/img_logoipsum-255 1.png';
+  
   // Place Order images
   static String imgFavorite = '$imagePath/img_favorite.svg';
 
