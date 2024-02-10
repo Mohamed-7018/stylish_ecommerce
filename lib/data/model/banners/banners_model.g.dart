@@ -9,12 +9,16 @@ part of 'banners_model.dart';
 BannersModel _$BannersModelFromJson(Map<String, dynamic> json) => BannersModel(
       status: json['status'] as bool?,
       message: json['message'],
+      data: (json['data'] as List<dynamic>?)
+          ?.map((e) => Data.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$BannersModelToJson(BannersModel instance) =>
     <String, dynamic>{
       'status': instance.status,
       'message': instance.message,
+      'data': instance.data,
     };
 
 Data _$DataFromJson(Map<String, dynamic> json) => Data(
