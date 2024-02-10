@@ -1,6 +1,10 @@
+// 🎯 Dart imports:
 import 'dart:math';
 
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 🌎 Project imports:
 import 'package:stylish_ecommerce/core/utils/values.dart';
 import 'package:stylish_ecommerce/data/model/home_data/home_data_model.dart';
 import 'package:stylish_ecommerce/presentation/common_widget/custom_image_view.dart';

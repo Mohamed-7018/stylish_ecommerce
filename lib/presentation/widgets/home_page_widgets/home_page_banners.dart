@@ -1,15 +1,21 @@
+// 🎯 Dart imports:
 import 'dart:async';
 
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 📦 Package imports:
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:visibility_detector/visibility_detector.dart';
+
+// 🌎 Project imports:
 import 'package:stylish_ecommerce/core/utils/values.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/banners/banners_vm_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/banners/get_banners_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/banners/get_banners_state.dart';
 import 'package:stylish_ecommerce/data/model/banners/banners_model.dart';
 import 'package:stylish_ecommerce/presentation/common_widget/custom_image_view.dart';
-import 'package:visibility_detector/visibility_detector.dart';
 
 /// Widget to display banners on the home page.
 class HomePageBanners extends StatelessWidget {

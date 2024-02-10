@@ -1,5 +1,10 @@
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 📦 Package imports:
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+// 🌎 Project imports:
 import 'package:stylish_ecommerce/core/utils/values.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/home_data/get_home_data_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/home_data/get_home_data_state.dart';

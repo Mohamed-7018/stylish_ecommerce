@@ -1,4 +1,7 @@
+// 📦 Package imports:
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+// 🌎 Project imports:
 import 'package:stylish_ecommerce/data/buisness_logic/home_data/get_home_data_state.dart';
 import 'package:stylish_ecommerce/data/model/home_data/home_data_model.dart';
 import 'package:stylish_ecommerce/data/model/network_exception/network_exception.dart';
