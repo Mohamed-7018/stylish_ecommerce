@@ -1,6 +1,9 @@
 import 'package:json_annotation/json_annotation.dart';
 
 part 'home_data_model.g.dart';
+
+
+/// Model class representing the home data received from the API.
 @JsonSerializable()
 class HomeDataModel {
   bool? status;
@@ -17,6 +20,7 @@ class HomeDataModel {
   Map<String, dynamic> toJson() => _$HomeDataModelToJson(this);
 }
 
+/// Model class representing the data section in the home data.
 @JsonSerializable()
 class Data {
   List<Banners>? banners;
@@ -32,6 +36,7 @@ class Data {
   Map<String, dynamic> toJson() => _$DataToJson(this);
 }
 
+/// Model class representing a banner.
 @JsonSerializable()
 class Banners {
   int? id;
@@ -48,6 +53,7 @@ class Banners {
   Map<String, dynamic> toJson() => _$BannersToJson(this);
 }
 
+/// Model class representing a product.
 @JsonSerializable()
 class Products {
   int? id;

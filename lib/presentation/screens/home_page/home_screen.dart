@@ -14,7 +14,6 @@ import 'package:stylish_ecommerce/presentation/widgets/home_page_widgets/home_pa
 import 'package:stylish_ecommerce/presentation/widgets/home_page_widgets/home_page_special_product.dart';
 import 'package:stylish_ecommerce/presentation/widgets/home_page_widgets/home_page_sponsered_banner.dart';
 import 'package:stylish_ecommerce/presentation/widgets/home_page_widgets/home_page_trending_widget.dart';
-import 'package:visibility_detector/visibility_detector.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
