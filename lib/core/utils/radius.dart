@@ -32,6 +32,9 @@ class GlobalAppRadius {
         48.horizontal,
       );
 
+  static BorderRadius get circleBorder100 => BorderRadius.circular(
+        100.horizontal,
+      );
   //!Custom borders
 
   /// Returns a custom border radius with different radii for each corner.

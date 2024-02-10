@@ -53,6 +53,8 @@ dependencies:
   shared_preferences: ^2.2.2
   # Customizable animated page indicator with a set of built-in effects.
   smooth_page_indicator: ^1.1.0
+  #A collection of stylish bottom navigation bars like animated bottom bar and bubble bottom bar for flutter.
+  stylish_bottom_bar: ^1.0.3
   # A widget that detects the visibility of its child and notifies a callback.
   visibility_detector: ^0.4.0+2
 

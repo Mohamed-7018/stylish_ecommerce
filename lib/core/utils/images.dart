@@ -299,15 +299,15 @@ class GlobalAppImages {
   static String imgArrowRightBlueGray900 =
       '$imagePath/img_arrow_right_blue_gray_900.svg';
 
-  static String imgNavHome = '$imagePath/img_nav_home.svg';
+  static String imgNavHome = '$imagePath/home.png';
 
-  static String imgNavWishlist = '$imagePath/img_nav_wishlist.svg';
+  static String imgNavWishlist = '$imagePath/wishlist.png';
 
-  static String imgShoppingCart2 = '$imagePath/img_shopping_cart_2.svg';
+  static String imgShoppingCart2 = '$imagePath/cart.png';
 
-  static String imgNavSearch = '$imagePath/img_nav_search.svg';
+  static String imgNavSearch = '$imagePath/search.png';
 
-  static String imgNavSetting = '$imagePath/img_nav_setting.svg';
+  static String imgNavSetting = '$imagePath/settings.png';
 
   static String imgNavHomeBlack90002 =
       '$imagePath/img_nav_home_black_900_02.svg';
