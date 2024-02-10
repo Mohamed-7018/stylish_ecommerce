@@ -11,7 +11,9 @@ class GetHomeDataCubit extends Cubit<GetHomeDataState> {
   /// Constructor for GetHomeDataCubit.
   ///
   /// [homeDataRepository]: Repository for accessing home data.
-  GetHomeDataCubit(this.homeDataRepository) : super(const Idle());
+  GetHomeDataCubit(this.homeDataRepository) : super(const Idle()) {
+    getHomeData();
+  }
 
   /// Fetches home data.
   ///

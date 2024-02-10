@@ -10,6 +10,7 @@ import 'package:stylish_ecommerce/core/router/routes.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/banners/banners_vm_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/banners/get_banners_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/categories/get_categories_cubit.dart';
+import 'package:stylish_ecommerce/data/buisness_logic/home_data/get_home_data_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/onboarding/onboading_vm.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_Vm/sign_in_vm_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_post/sign_in_post_cubit.dart';
@@ -81,6 +82,9 @@ class AppRouter {
             ),
             BlocProvider<BannersViewModel>(
               create: (context) => BannersViewModel(),
+            ),
+            BlocProvider<GetHomeDataCubit>(
+              create: (context) => GetHomeDataCubit(getIt()),
             ),
           ], child: const HomePage()),
         );

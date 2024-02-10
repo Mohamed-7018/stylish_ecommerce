@@ -58,6 +58,7 @@ class Banners {
 class Products {
   int? id;
   double? price;
+  @JsonKey(name: 'old_price')
   double? oldPrice;
   int? discount;
   String? image;

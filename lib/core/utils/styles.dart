@@ -37,6 +37,9 @@ class CustomTextStyles {
   static get bodySmall10 => Get.textTheme.bodySmall!.copyWith(
         fontSize: 10.fSize,
       );
+  static get bodySmall12 => Get.textTheme.bodySmall!.copyWith(
+        fontSize: 12.fSize,
+      );
   static get bodySmallBluegray400 => Get.textTheme.bodySmall!.copyWith(
         color: GlobalAppColors.blueGray400,
         fontWeight: FontWeight.w300,
@@ -196,8 +199,7 @@ class CustomTextStyles {
         color: GlobalAppColors.gray50003,
         fontSize: 18.fSize,
       );
-  static get titleMediumGray500SemiBold =>
-      Get.textTheme.titleMedium!.copyWith(
+  static get titleMediumGray500SemiBold => Get.textTheme.titleMedium!.copyWith(
         color: GlobalAppColors.gray500,
         fontSize: 18.fSize,
         fontWeight: FontWeight.w600,
@@ -317,4 +319,3 @@ extension on TextStyle {
     );
   }
 }
-

@@ -9,6 +9,7 @@ import 'package:stylish_ecommerce/presentation/widgets/home_page_widgets/home_pa
 import 'package:stylish_ecommerce/presentation/widgets/home_page_widgets/home_page_banners.dart';
 import 'package:stylish_ecommerce/presentation/widgets/home_page_widgets/home_page_categories.dart';
 import 'package:stylish_ecommerce/presentation/widgets/home_page_widgets/home_page_deal_of_the_day.dart';
+import 'package:stylish_ecommerce/presentation/widgets/home_page_widgets/home_page_featured_products.dart';
 import 'package:stylish_ecommerce/presentation/widgets/home_page_widgets/home_page_new_arrivals.dart';
 import 'package:stylish_ecommerce/presentation/widgets/home_page_widgets/home_page_special_offers.dart';
 import 'package:stylish_ecommerce/presentation/widgets/home_page_widgets/home_page_special_product.dart';
@@ -67,6 +68,10 @@ class HomePage extends StatelessWidget {
                     ),
                     child: const HomePageDealOftheDay(),
                   ),
+                  SizedBox(
+                    height: 16.vertical,
+                  ),
+                  const HomePageFeaturedproducts(),
                   SizedBox(
                     height: 16.vertical,
                   ),

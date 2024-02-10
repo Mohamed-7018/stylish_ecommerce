@@ -9,12 +9,14 @@ import 'package:stylish_ecommerce/core/router/app_router.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/banners/banners_vm_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/banners/get_banners_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/categories/get_categories_cubit.dart';
+import 'package:stylish_ecommerce/data/buisness_logic/home_data/get_home_data_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_Vm/sign_in_vm_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_post/sign_in_post_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_up/sign_up_post/sign_up_post_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_up/sign_up_vm/sign_up_vm_cubit.dart';
 import 'package:stylish_ecommerce/data/repository/banner_repository.dart';
 import 'package:stylish_ecommerce/data/repository/categories_repo.dart';
+import 'package:stylish_ecommerce/data/repository/home_data_repo.dart';
 import 'package:stylish_ecommerce/data/repository/sign_in_post_repo.dart';
 import 'package:stylish_ecommerce/data/repository/sign_up_post_repo.dart';
 import 'package:stylish_ecommerce/data/web_services/delete.dart';
@@ -82,4 +84,15 @@ void setupGetIt() {
   getIt.registerLazySingleton<BannersViewModel>(
     () => BannersViewModel(),
   );
+
+  // home data
+  getIt.registerLazySingleton<HomeDataRepository>(
+    () => HomeDataRepository(
+      dio: getIt(),
+      getMethod: getIt(),
+    ),
+  );
+  getIt.registerLazySingleton<GetHomeDataCubit>(
+      () => GetHomeDataCubit(getIt()));
+
 }
