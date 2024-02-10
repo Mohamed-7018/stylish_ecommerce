@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:stylish_ecommerce/core/helper/localization_extension.dart';
 import 'package:stylish_ecommerce/core/utils/values.dart';
 import 'package:stylish_ecommerce/presentation/common_widget/custom_image_view.dart';
+import 'package:stylish_ecommerce/presentation/widgets/home_page_widgets/home_page_view_all_btn.dart';
 
 /// Widget for displaying the "Trending products" section on the home page.
 class HomePageTrendingPrducts extends StatelessWidget {
@@ -51,34 +52,7 @@ class HomePageTrendingPrducts extends StatelessWidget {
               ),
             ],
           ),
-          Container(
-            width: 89.horizontal,
-            height: 28.vertical,
-            decoration: BoxDecoration(
-              borderRadius: GlobalAppRadius.circleBorder8,
-              border: Border.all(
-                color: GlobalAppColors.whiteA70001,
-              ),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text(
-                  "lbl_view_all".tr,
-                  style: CustomTextStyles.labelLargeWhiteA70001,
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 4.horizontal),
-                  child: CustomImageView(
-                    imagePath: GlobalAppImages.imgArrowright,
-                    height: 16.adaptSize,
-                    width: 16.adaptSize,
-                  ),
-                ),
-              ],
-            ),
-          )
+          const HomePageViewAllButton()
         ],
       ),
     );
