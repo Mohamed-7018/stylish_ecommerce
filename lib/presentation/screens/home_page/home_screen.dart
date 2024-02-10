@@ -57,12 +57,7 @@ class HomePage extends StatelessWidget {
                   ),
                   Padding(
                     padding: EdgeInsets.only(right: 16.horizontal),
-                    child: VisibilityDetector(
-                      key: const Key("banners"),
-                      onVisibilityChanged: (visibilityInfo){
-                        
-                      },
-                      child: const HomePageBanners(),),
+                    child: const HomePageBanners(),
                   ),
                   SizedBox(
                     height: 16.vertical,
