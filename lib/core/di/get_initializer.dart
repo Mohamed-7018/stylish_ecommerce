@@ -6,11 +6,13 @@ import 'package:get_it/get_it.dart';
 import 'package:stylish_ecommerce/core/helper/share_prefs_helper.dart';
 import 'package:stylish_ecommerce/core/networking/dio.dart';
 import 'package:stylish_ecommerce/core/router/app_router.dart';
+import 'package:stylish_ecommerce/data/buisness_logic/banners/get_banners_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/categories/get_categories_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_Vm/sign_in_vm_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_post/sign_in_post_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_up/sign_up_post/sign_up_post_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_up/sign_up_vm/sign_up_vm_cubit.dart';
+import 'package:stylish_ecommerce/data/repository/banner_repository.dart';
 import 'package:stylish_ecommerce/data/repository/categories_repo.dart';
 import 'package:stylish_ecommerce/data/repository/sign_in_post_repo.dart';
 import 'package:stylish_ecommerce/data/repository/sign_up_post_repo.dart';
@@ -61,5 +63,19 @@ void setupGetIt() {
       getMethod: getIt(),
     ),
   );
-  getIt.registerLazySingleton(() => GetCategriesCubit(getIt()));
+  getIt.registerLazySingleton<GetCategriesCubit>(
+      () => GetCategriesCubit(getIt()));
+
+  // banners
+  getIt.registerLazySingleton<BannerRepository>(
+    () => BannerRepository(
+      dio: getIt(),
+      getMethod: getIt(),
+    ),
+  );
+  getIt.registerLazySingleton<GetBannersCubit>(
+    () => GetBannersCubit(
+      getIt(),
+    ),
+  );
 }

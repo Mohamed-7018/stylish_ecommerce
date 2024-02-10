@@ -8,10 +8,10 @@ import 'package:stylish_ecommerce/data/model/network_exception/network_exception
 import 'package:stylish_ecommerce/data/repository/banner_repository.dart';
 
 /// Cubit responsible for managing the state of Banners data retrieval.
-class GetBannersCategory extends Cubit<GetBannersState> {
+class GetBannersCubit extends Cubit<GetBannersState> {
   final BannerRepository bannerRepository;
 
-  GetBannersCategory(this.bannerRepository) : super(const Idle());
+  GetBannersCubit(this.bannerRepository) : super(const Idle());
 
   /// Fetches the banners from the repository.
   void getBanners() async {
