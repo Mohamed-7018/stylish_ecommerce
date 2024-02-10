@@ -6,6 +6,7 @@ import 'package:get_it/get_it.dart';
 import 'package:stylish_ecommerce/core/helper/share_prefs_helper.dart';
 import 'package:stylish_ecommerce/core/networking/dio.dart';
 import 'package:stylish_ecommerce/core/router/app_router.dart';
+import 'package:stylish_ecommerce/data/buisness_logic/banners/banners_vm_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/banners/get_banners_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/categories/get_categories_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_Vm/sign_in_vm_cubit.dart';
@@ -77,5 +78,8 @@ void setupGetIt() {
     () => GetBannersCubit(
       getIt(),
     ),
+  );
+  getIt.registerLazySingleton<BannersViewModel>(
+    () => BannersViewModel(),
   );
 }

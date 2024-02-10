@@ -9,6 +9,7 @@ part 'get_banners_state.freezed.dart';
 /// Represents the different states of Banners data retrieval.
 @freezed
 class GetBannersState<T> with _$GetBannersState {
+
   /// Represents the idle state where no data fetching operation is in progress.
   const factory GetBannersState.idle() = Idle<T>;
 

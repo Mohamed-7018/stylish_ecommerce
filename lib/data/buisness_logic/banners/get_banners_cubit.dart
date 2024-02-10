@@ -11,7 +11,9 @@ import 'package:stylish_ecommerce/data/repository/banner_repository.dart';
 class GetBannersCubit extends Cubit<GetBannersState> {
   final BannerRepository bannerRepository;
 
-  GetBannersCubit(this.bannerRepository) : super(const Idle());
+  GetBannersCubit(this.bannerRepository) : super(const Idle()) {
+    getBanners();
+  }
 
   /// Fetches the banners from the repository.
   void getBanners() async {

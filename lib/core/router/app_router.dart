@@ -7,6 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 // 🌎 Project imports:
 import 'package:stylish_ecommerce/core/di/get_initializer.dart';
 import 'package:stylish_ecommerce/core/router/routes.dart';
+import 'package:stylish_ecommerce/data/buisness_logic/banners/banners_vm_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/banners/get_banners_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/categories/get_categories_cubit.dart';
 import 'package:stylish_ecommerce/data/buisness_logic/onboarding/onboading_vm.dart';
@@ -77,7 +78,10 @@ class AppRouter {
               create: (context) => GetBannersCubit(
                 getIt(),
               ),
-            )
+            ),
+            BlocProvider<BannersViewModel>(
+              create: (context) => BannersViewModel(),
+            ),
           ], child: const HomePage()),
         );
       case Routes.getStartedPage:

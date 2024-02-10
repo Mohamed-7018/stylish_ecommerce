@@ -6,6 +6,7 @@ import 'package:stylish_ecommerce/core/helper/localization_extension.dart';
 import 'package:stylish_ecommerce/core/utils/values.dart';
 import 'package:stylish_ecommerce/presentation/common_widget/custom_search_view.dart';
 import 'package:stylish_ecommerce/presentation/widgets/home_page_widgets/home_page_appbar.dart';
+import 'package:stylish_ecommerce/presentation/widgets/home_page_widgets/home_page_banners.dart';
 import 'package:stylish_ecommerce/presentation/widgets/home_page_widgets/home_page_categories.dart';
 
 class HomePage extends StatelessWidget {
@@ -29,7 +30,7 @@ class HomePage extends StatelessWidget {
                 left: 16.horizontal,
                 bottom: 18.vertical,
               ),
-              child:  Column(
+              child: Column(
                 children: [
                   Padding(
                     padding: EdgeInsets.only(right: 16.vertical),
@@ -40,8 +41,17 @@ class HomePage extends StatelessWidget {
                       fillColor: GlobalAppColors.whiteA70001,
                     ),
                   ),
-                  SizedBox(height: 16.vertical ,),
+                  SizedBox(
+                    height: 16.vertical,
+                  ),
                   const HomePageCategoriesWidget(),
+                  SizedBox(
+                    height: 16.vertical,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(right: 16.horizontal),
+                    child: const HomePageBanners(),
+                  ),
                 ],
               ),
             ),
