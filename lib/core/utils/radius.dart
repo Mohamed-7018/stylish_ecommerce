@@ -7,6 +7,11 @@ class GlobalAppBorderRadius {}
 class GlobalAppRadius {
   //!Circle borders
 
+  /// Returns a circular border radius with a radius of 8.horizontal.
+  static BorderRadius get circleBorder8 => BorderRadius.circular(
+        8.horizontal,
+      );
+
   /// Returns a circular border radius with a radius of 20.horizontal.
   static BorderRadius get circleBorder20 => BorderRadius.circular(
         20.horizontal,
