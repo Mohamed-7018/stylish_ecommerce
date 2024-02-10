@@ -87,7 +87,7 @@ class HomePageBanners extends StatelessWidget {
                       count: response.data!.length,
                       effect: WormEffect(
                         spacing: 10,
-                        activeDotColor: GlobalAppColors.pink300,
+                        activeDotColor: GlobalAppColors.pink30001,
                         dotColor:
                             GlobalAppColors.blueGray90001.withOpacity(0.2),
                         dotHeight: 10.vertical,

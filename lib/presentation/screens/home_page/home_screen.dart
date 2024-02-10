@@ -11,6 +11,7 @@ import 'package:stylish_ecommerce/presentation/widgets/home_page_widgets/home_pa
 import 'package:stylish_ecommerce/presentation/widgets/home_page_widgets/home_page_deal_of_the_day.dart';
 import 'package:stylish_ecommerce/presentation/widgets/home_page_widgets/home_page_new_arrivals.dart';
 import 'package:stylish_ecommerce/presentation/widgets/home_page_widgets/home_page_special_offers.dart';
+import 'package:stylish_ecommerce/presentation/widgets/home_page_widgets/home_page_sponsered_banner.dart';
 import 'package:stylish_ecommerce/presentation/widgets/home_page_widgets/home_page_trending_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -92,7 +93,10 @@ class HomePage extends StatelessWidget {
                     ),
                     child: const HomePageNewArrival(),
                   ),
-                  
+                  SizedBox(
+                    height: 16.vertical,
+                  ),
+                  const HomePageSposeredBanner(),
                 ],
               ),
             ),
