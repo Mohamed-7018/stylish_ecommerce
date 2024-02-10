@@ -6,17 +6,21 @@ import 'package:stylish_ecommerce/presentation/common_widget/custom_image_view.d
 /// Widget for displaying a "View All" button on the home page.
 class HomePageViewAllButton extends StatelessWidget {
   final Color? color;
+  final String? text;
+  final double? width;
+  final double? height;
 
   /// Constructor for HomePageViewAllButton.
   ///
   /// [color]: Optional color for the button background.
-  const HomePageViewAllButton({super.key, this.color});
+  const HomePageViewAllButton(
+      {super.key, this.color, this.text, this.width, this.height});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 89.horizontal,
-      height: 28.vertical,
+      width: width ?? 89.horizontal,
+      height: height ?? 28.vertical,
       decoration: BoxDecoration(
         color: color,
         borderRadius: GlobalAppRadius.circleBorder8,
@@ -29,7 +33,7 @@ class HomePageViewAllButton extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
-            "lbl_view_all".tr,
+            text ?? "lbl_view_all".tr,
             style: CustomTextStyles.labelLargeWhiteA70001,
           ),
           Container(
