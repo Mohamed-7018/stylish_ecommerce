@@ -30,9 +30,9 @@ The design of Stylish Ecommerce is crafted with precision and attention to detai
 
 
 ![cover](https://github.com/Mohamed-7018/stylish_ecommerce/assets/80456446/c507dc78-a2fc-4b8f-b1b7-1db314fc3b2d)  
-- **Figma Design Files**: [Link to Figma files]
+- **Figma Design Files**: [Link to Figma files](https://www.figma.com/file/1GG80t9oygSW4emSHjSGW7/eCommerce-App-UI-Kit---Case-Study-Ecommerce-Mobile-App-UI-kit-(Community)?type=design&node-id=1%3A16990&mode=design&t=ogt50eOmogGH6PBg-1)
 
-- **Design System**: [Link to design system documentation]
+- **Design System**: [Link to design system documentation](https://www.figma.com/file/1GG80t9oygSW4emSHjSGW7/eCommerce-App-UI-Kit---Case-Study-Ecommerce-Mobile-App-UI-kit-(Community)?type=design&node-id=1%3A16990&mode=design&t=ogt50eOmogGH6PBg-1)
 
 ## Case Study
 
