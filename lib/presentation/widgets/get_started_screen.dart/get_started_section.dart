@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 
 // 🌎 Project imports:
 import 'package:stylish_ecommerce/core/helper/localization_extension.dart';
+import 'package:stylish_ecommerce/core/router/routes.dart';
 import 'package:stylish_ecommerce/core/utils/values.dart';
 import 'package:stylish_ecommerce/presentation/common_widget/custom_elevated_button.dart';
 
 /// Represents the section displayed to prompt users to get started with the app.
 class GetStartedSection extends StatelessWidget {
   /// Constructor for the GetStartedSection.
-   const GetStartedSection({super.key});
+  const GetStartedSection({super.key});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -45,6 +46,9 @@ class GetStartedSection extends StatelessWidget {
             // Displaying localized button text.
             text: "lbl_get_started".tr,
             buttonTextStyle: CustomTextStyles.titleLarge23,
+            onPressed: () {
+              Navigator.of(context).pushReplacementNamed(Routes.homePage);
+            },
           ),
         ],
       ),
