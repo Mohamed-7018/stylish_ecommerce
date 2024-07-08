@@ -3,6 +3,7 @@
 ## Business Name: Stylish Ecommerce
 
 Welcome to the Stylish Ecommerce project! This is an open-source project aimed at creating a stylish and user-friendly ecommerce platform. Whether you're a developer, designer, or business enthusiast, we invite you to contribute and be a part of shaping the future of online shopping experiences.
+**Hint:**stylish and user-friendly e-commerce platform utilizing a third-party API for backend functionality. The backend was developed using Java Spring Boot but is not open source yet.
 
 ## Open Source
 
