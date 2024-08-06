@@ -8,8 +8,8 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 // 🌎 Project imports:
 import 'package:stylish_ecommerce/core/helper/localization_extension.dart';
 import 'package:stylish_ecommerce/core/utils/values.dart';
-import 'package:stylish_ecommerce/data/buisness_logic/onboarding/onboading_vm.dart';
-import 'package:stylish_ecommerce/data/buisness_logic/onboarding/onboarding_vm_cubit.dart';
+import 'package:stylish_ecommerce/presentation/buisness_logic/onboarding/onboading_vm.dart';
+import 'package:stylish_ecommerce/presentation/buisness_logic/onboarding/onboarding_vm_cubit.dart';
 
 /// A widget representing the footer section of the onboarding screen.
 ///
@@ -25,7 +25,8 @@ class OnboardingFooter extends StatelessWidget {
   ///
   /// * [onBoardingController] - The controller for managing the onboarding page view.
   /// * [length] - The total number of onboarding pages.
-  const OnboardingFooter({super.key, required this.onBoardingController, required this.length});
+  const OnboardingFooter(
+      {super.key, required this.onBoardingController, required this.length});
 
   @override
   Widget build(BuildContext context) {

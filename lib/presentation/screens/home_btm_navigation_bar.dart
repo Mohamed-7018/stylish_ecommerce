@@ -5,12 +5,11 @@ import 'package:stylish_bottom_bar/stylish_bottom_bar.dart';
 import 'package:stylish_ecommerce/core/di/get_initializer.dart';
 import 'package:stylish_ecommerce/core/helper/localization_extension.dart';
 import 'package:stylish_ecommerce/core/utils/values.dart';
-import 'package:stylish_ecommerce/data/buisness_logic/banners/banners_vm_cubit.dart';
-import 'package:stylish_ecommerce/data/buisness_logic/banners/get_banners_cubit.dart';
-import 'package:stylish_ecommerce/data/buisness_logic/categories/get_categories_cubit.dart';
-import 'package:stylish_ecommerce/data/buisness_logic/home_data/get_home_data_cubit.dart';
+import 'package:stylish_ecommerce/presentation/buisness_logic/banners/banners_vm_cubit.dart';
+import 'package:stylish_ecommerce/presentation/buisness_logic/banners/get_banners_cubit.dart';
+import 'package:stylish_ecommerce/presentation/buisness_logic/categories/get_categories_cubit.dart';
+import 'package:stylish_ecommerce/presentation/buisness_logic/home_data/get_home_data_cubit.dart';
 import 'package:stylish_ecommerce/presentation/screens/home_page/home_screen.dart';
-
 
 /// Widget for displaying the bottom navigation bar on the home page.
 class HomePageButtomnavigationBar extends StatefulWidget {
@@ -90,7 +89,7 @@ class _HomePageButtomnavigationBarState
             selectedIcon: const Icon(Icons.house_rounded),
             selectedColor: GlobalAppColors.red60001,
             unSelectedColor: GlobalAppColors.black90002,
-            title:  Text("lbl_home".tr),
+            title: Text("lbl_home".tr),
           ),
           BottomBarItem(
             icon: ImageIcon(
@@ -100,27 +99,26 @@ class _HomePageButtomnavigationBarState
             unSelectedColor:
                 GlobalAppColors.black90002, // unSelectedColor: Colors.purple,
             // backgroundColor: Colors.orange,
-            title:  Text("lbl_wishlist".tr),
+            title: Text("lbl_wishlist".tr),
           ),
           BottomBarItem(
               icon: ImageIcon(
-              AssetImage(GlobalAppImages.imgNavSearch),
-            ),
-              
+                AssetImage(GlobalAppImages.imgNavSearch),
+              ),
+
               // backgroundColor: Colors.amber,
               selectedColor: GlobalAppColors.red60001,
               unSelectedColor: GlobalAppColors.black90002,
-              title:  Text("lbl_search".tr)),
+              title: Text("lbl_search".tr)),
           BottomBarItem(
-             icon: ImageIcon(
-              AssetImage(GlobalAppImages.imgNavSetting),
-            ),
+              icon: ImageIcon(
+                AssetImage(GlobalAppImages.imgNavSetting),
+              ),
               // backgroundColor: Colors.purpleAccent,
               selectedColor: GlobalAppColors.red60001,
               unSelectedColor: GlobalAppColors.black90002,
-              title:  Text("lbl_setting".tr)),
+              title: Text("lbl_setting".tr)),
         ],
-
         borderRadius: GlobalAppRadius.circleBorder48,
         hasNotch: true,
         fabLocation: StylishBarFabLocation.center,
@@ -133,10 +131,8 @@ class _HomePageButtomnavigationBarState
         },
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          
-        },
-        shape:  RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        onPressed: () {},
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         backgroundColor: Colors.white,
         child: ImageIcon(
           AssetImage(GlobalAppImages.imgShoppingCart2),

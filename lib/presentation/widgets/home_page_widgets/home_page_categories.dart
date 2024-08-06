@@ -6,8 +6,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 // 🌎 Project imports:
 import 'package:stylish_ecommerce/core/utils/values.dart';
-import 'package:stylish_ecommerce/data/buisness_logic/categories/get_categories_cubit.dart';
-import 'package:stylish_ecommerce/data/buisness_logic/categories/get_categories_state.dart';
+import 'package:stylish_ecommerce/presentation/buisness_logic/categories/get_categories_cubit.dart';
+import 'package:stylish_ecommerce/presentation/buisness_logic/categories/get_categories_state.dart';
 import 'package:stylish_ecommerce/data/model/caegories/categories_model.dart';
 import 'package:stylish_ecommerce/presentation/widgets/home_page_widgets/home_page_category_item_widget.dart';
 

@@ -20,7 +20,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   # Approximate how your Flutter app looks and performs on another device.
-  device_preview: ^1.1.0
+  device_preview: ^1.2.0
   #HTTP networking package
   dio: ^5.3.3
   # state management package

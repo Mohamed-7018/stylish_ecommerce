@@ -7,8 +7,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 // 🌎 Project imports:
 import 'package:stylish_ecommerce/core/router/routes.dart';
 import 'package:stylish_ecommerce/core/utils/values.dart';
-import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_post/sign_in_post_cubit.dart';
-import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_post/sign_in_post_state.dart';
+import 'package:stylish_ecommerce/presentation/buisness_logic/sign_in/sign_in_post/sign_in_post_cubit.dart';
+import 'package:stylish_ecommerce/presentation/buisness_logic/sign_in/sign_in_post/sign_in_post_state.dart';
 import 'package:stylish_ecommerce/data/model/network_exception/network_exception.dart';
 
 /// A widget that listens to the state changes in the [SignInPostCubit] and
@@ -46,6 +46,4 @@ class SignInBlocListener extends StatelessWidget {
       child: const SizedBox.shrink(),
     );
   }
-
-
 }

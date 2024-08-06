@@ -7,7 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 // 🌎 Project imports:
 import 'package:stylish_ecommerce/core/helper/app_regex.dart';
 import 'package:stylish_ecommerce/core/utils/values.dart';
-import 'package:stylish_ecommerce/data/buisness_logic/sign_up/sign_up_vm/sign_up_vm_cubit.dart';
+import 'package:stylish_ecommerce/presentation/buisness_logic/sign_up/sign_up_vm/sign_up_vm_cubit.dart';
 
 /// Widget to display password validation rules.
 class PasswordValidations extends StatefulWidget {
@@ -80,13 +80,10 @@ class _PasswordValidationsState extends State<PasswordValidations> {
         Text(
           text,
           style: Get.textTheme.bodySmall!.copyWith(
-            decoration: hasValidated ? TextDecoration.lineThrough : null,
-            decorationColor: Colors.green,
-            decorationThickness: 1.5,
-            color: hasValidated
-                ? Colors.grey
-                : Get.colorScheme.primary
-          ),
+              decoration: hasValidated ? TextDecoration.lineThrough : null,
+              decorationColor: Colors.green,
+              decorationThickness: 1.5,
+              color: hasValidated ? Colors.grey : Get.colorScheme.primary),
         )
       ],
     );

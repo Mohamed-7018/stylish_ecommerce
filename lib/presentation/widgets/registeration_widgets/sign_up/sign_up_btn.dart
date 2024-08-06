@@ -7,8 +7,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 // 🌎 Project imports:
 import 'package:stylish_ecommerce/core/helper/localization_extension.dart';
 import 'package:stylish_ecommerce/core/utils/values.dart';
-import 'package:stylish_ecommerce/data/buisness_logic/sign_up/sign_up_post/sign_up_post_cubit.dart';
-import 'package:stylish_ecommerce/data/buisness_logic/sign_up/sign_up_vm/sign_up_vm_cubit.dart';
+import 'package:stylish_ecommerce/presentation/buisness_logic/sign_up/sign_up_post/sign_up_post_cubit.dart';
+import 'package:stylish_ecommerce/presentation/buisness_logic/sign_up/sign_up_vm/sign_up_vm_cubit.dart';
 import 'package:stylish_ecommerce/data/model/user_api/register/sign_up_request_body.dart';
 import 'package:stylish_ecommerce/presentation/common_widget/custom_elevated_button.dart';
 

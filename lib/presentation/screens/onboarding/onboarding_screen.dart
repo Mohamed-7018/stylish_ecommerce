@@ -6,7 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 // 🌎 Project imports:
 import 'package:stylish_ecommerce/core/utils/values.dart';
-import 'package:stylish_ecommerce/data/buisness_logic/onboarding/onboading_vm.dart';
+import 'package:stylish_ecommerce/presentation/buisness_logic/onboarding/onboading_vm.dart';
 import 'package:stylish_ecommerce/data/model/onboarding/onboarding_screen_model.dart';
 import 'package:stylish_ecommerce/presentation/widgets/onboarding_widgets/onboarding_app_bar.dart';
 import 'package:stylish_ecommerce/presentation/widgets/onboarding_widgets/onboarding_footer.dart';

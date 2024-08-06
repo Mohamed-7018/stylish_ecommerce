@@ -6,8 +6,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 // 🌎 Project imports:
 import 'package:stylish_ecommerce/core/utils/values.dart';
-import 'package:stylish_ecommerce/data/buisness_logic/home_data/get_home_data_cubit.dart';
-import 'package:stylish_ecommerce/data/buisness_logic/home_data/get_home_data_state.dart';
+import 'package:stylish_ecommerce/presentation/buisness_logic/home_data/get_home_data_cubit.dart';
+import 'package:stylish_ecommerce/presentation/buisness_logic/home_data/get_home_data_state.dart';
 import 'package:stylish_ecommerce/data/model/home_data/home_data_model.dart';
 import 'package:stylish_ecommerce/presentation/common_widget/custom_image_view.dart';
 import 'package:stylish_ecommerce/presentation/widgets/home_page_widgets/home_page_featured_product_item.dart';
@@ -64,7 +64,7 @@ class HomePageFeaturedproducts extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.only(right: 16.horizontal),
                       child: GestureDetector(
-                        onTap: ()=> scrollRight(),
+                        onTap: () => scrollRight(),
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: GlobalAppRadius.circleBorder48,

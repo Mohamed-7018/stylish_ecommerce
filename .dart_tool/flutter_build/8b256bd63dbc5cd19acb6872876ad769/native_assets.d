@@ -1,0 +1,1 @@
+ D:\\stylish_ecommerce\\.dart_tool\\flutter_build\\8b256bd63dbc5cd19acb6872876ad769\\native_assets.yaml: 

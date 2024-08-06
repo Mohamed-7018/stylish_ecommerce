@@ -7,11 +7,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 // 🌎 Project imports:
 import 'package:stylish_ecommerce/core/di/get_initializer.dart';
 import 'package:stylish_ecommerce/core/router/routes.dart';
-import 'package:stylish_ecommerce/data/buisness_logic/onboarding/onboading_vm.dart';
-import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_Vm/sign_in_vm_cubit.dart';
-import 'package:stylish_ecommerce/data/buisness_logic/sign_in/sign_in_post/sign_in_post_cubit.dart';
-import 'package:stylish_ecommerce/data/buisness_logic/sign_up/sign_up_post/sign_up_post_cubit.dart';
-import 'package:stylish_ecommerce/data/buisness_logic/sign_up/sign_up_vm/sign_up_vm_cubit.dart';
+import 'package:stylish_ecommerce/presentation/buisness_logic/onboarding/onboading_vm.dart';
+import 'package:stylish_ecommerce/presentation/buisness_logic/sign_in/sign_in_Vm/sign_in_vm_cubit.dart';
+import 'package:stylish_ecommerce/presentation/buisness_logic/sign_in/sign_in_post/sign_in_post_cubit.dart';
+import 'package:stylish_ecommerce/presentation/buisness_logic/sign_up/sign_up_post/sign_up_post_cubit.dart';
+import 'package:stylish_ecommerce/presentation/buisness_logic/sign_up/sign_up_vm/sign_up_vm_cubit.dart';
 import 'package:stylish_ecommerce/presentation/screens/get_started_screen/get_started_screen.dart';
 import 'package:stylish_ecommerce/presentation/screens/home_btm_navigation_bar.dart';
 import 'package:stylish_ecommerce/presentation/screens/onboarding/onboarding_screen.dart';
@@ -65,8 +65,7 @@ class AppRouter {
         );
       case Routes.homePage:
         return MaterialPageRoute(
-          builder: (context) => const HomePageButtomnavigationBar()
-        );
+            builder: (context) => const HomePageButtomnavigationBar());
       case Routes.getStartedPage:
         return MaterialPageRoute(
           builder: (context) => const GetStartedScreen(),
